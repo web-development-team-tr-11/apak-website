@@ -8,10 +8,146 @@ body {
   line-height: 1;
 }
 
+.contacts__item {
+  color: #444444;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  transition: all 0.3s ease;
+}
+.contacts__item:hover {
+  color: #ed1e79;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+.social__item {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.social__item:hover {
+  transform: scale(1.15);
+}
+
+.search {
+  position: relative;
+}
+.search__input {
+  min-height: 40px;
+  background: inherit;
+  background-color: #e6e6e6;
+  color: #737373;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  border-right: 0;
+  border-radius: 5px 0px 0px 5px;
+}
+.search__logo {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 0;
+  background: none;
+  border: none;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.menu__link {
+  position: relative;
+  color: #444444;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  transition: all 0.3s ease;
+}
+.menu__link:hover {
+  color: rgb(41, 171, 226);
+}
+.menu__link::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0;
+  bottom: -2.5px;
+  height: 2px;
+  background-color: rgb(41, 171, 226);
+  transition: width 0.3s;
+}
+.menu__link:hover::before {
+  right: auto;
+  width: 100%;
+  left: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+}
+.header__container {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo img {
+  width: 200px;
+}
+.header__contact-me-btn {
+  font-family: inherit;
+  font-size: inherit;
+  min-height: 40px;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: rgb(41, 171, 226);
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  background: none;
+  border: 2px solid rgb(41, 171, 226);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.header__contact-me-btn:hover {
+  background: #ed1e79;
+  border: 2px solid #ed1e79;
+  color: #fff;
 }
 
 .main {

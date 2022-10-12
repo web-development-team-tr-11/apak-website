@@ -7,3 +7,25 @@ body {
   font-weight: 400;
   line-height: 1;
 }
+
+$textColor: #444444;
+$pinkColor: #ed1e79;
+$blueColor: rgba(41, 171, 226, 1);
+
+@mixin underline($element, $color) {
+  #{$element}::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -2.5px;
+    height: 2px;
+    background-color: $color;
+    transition: width 0.3s;
+  }
+  #{$element}:hover::before {
+    right: auto;
+    width: 100%;
+    left: 0;
+  }
+}
