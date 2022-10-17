@@ -11,12 +11,13 @@
 }
 
 .header {
-  position: fixed;
+  background-color: #fafafa;
+  //position: fixed;
   width: 100%;
 
   &__container {
-    padding: 10px 0px;
     display: flex;
+    padding: 10px 10px;
     flex-direction: column;
     gap: 10px;
   }
@@ -41,32 +42,6 @@
 
   &__logo img {
     width: 200px;
-  }
-
-  &__contact-me-btn {
-    font-family: inherit;
-    font-size: inherit;
-    min-height: 40px;
-    padding: 5px 20px;
-    cursor: pointer;
-    color: $blueColor;
-    font-weight: 600;
-    line-height: calc((24 / 16) * 100%);
-    letter-spacing: 0.2px;
-    background: none;
-    border: 2px solid $blueColor;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: $pinkColor;
-      border: 2px solid $pinkColor;
-      color: #fff;
-    }
   }
 }
 

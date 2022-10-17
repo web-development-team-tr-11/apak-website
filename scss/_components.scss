@@ -1,9 +1,53 @@
+.burger {
+  display: none;
+
+  @include _1100 {
+    display: block;
+    width: 50px;
+    height: 10px;
+    cursor: pointer;
+    background-color: red;
+  }
+}
+
+.btn {
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  min-height: 40px;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: $blueColor;
+  font-weight: 600;
+  line-height: calc((24 / 16) * 100%);
+  letter-spacing: 0.2px;
+  background: none;
+  border: 2px solid $blueColor;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $pinkColor;
+    border: 2px solid $pinkColor;
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 .contacts {
   &__item {
     color: $textColor;
     line-height: calc((24 / 16) * 100%);
     letter-spacing: 0.1px;
     transition: all 0.3s ease;
+
     &:hover {
       color: $pinkColor;
     }
@@ -24,33 +68,11 @@
   }
 }
 
-.search {
-  position: relative;
-
-  &__input {
-    min-height: 40px;
-    background: inherit;
-    background-color: #e6e6e6;
-    color: #737373;
-    padding: 0px 20px;
-    box-sizing: border-box;
-    border: 1px solid #e6e6e6;
-    border-right: 0;
-    border-radius: 5px 0px 0px 5px;
-  }
-
-  &__logo {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-    top: 25%;
-    left: 0;
-    background: none;
-    border: none;
-  }
-}
-
 .menu {
+  @include _1100 {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -68,4 +90,29 @@
     }
   }
   @include underline("&__link", $blueColor);
+}
+
+.search {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    font-size: inherit;
+    outline: none;
+    min-height: inherit;
+    background-color: #e6e6e6;
+    padding: 0px 15px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    min-height: inherit;
+    background-color: #c1c1c1;
+    border: none;
+    width: 50px;
+    border-radius: 0px 5px 5px 0px;
+  }
 }
