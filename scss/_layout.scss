@@ -1,3 +1,9 @@
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -26,11 +32,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__contacts {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 35px;
   }
 
@@ -38,13 +46,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  &__logo img {
-    width: 200px;
+  &__logo {
+    display: flex;
+    flex: 0 1 20%;
+
+    img {
+      width: 200px;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include _992 {
+      display: flex;
+      flex: 0 1 15%;
+      justify-content: flex-end;
+    }
   }
 }
 
 .main {
   flex: 1 1 auto;
+}
+
+section {
+  margin-top: 100px;
 }
