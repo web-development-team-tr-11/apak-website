@@ -1,4 +1,6 @@
 body {
+  position: relative;
+
   &.lock {
     overflow: hidden;
   }
@@ -26,6 +28,10 @@ body {
     padding: 10px 10px;
     flex-direction: column;
     gap: 10px;
+
+    @include _992 {
+      flex-direction: column-reverse;
+    }
   }
 
   &__top {

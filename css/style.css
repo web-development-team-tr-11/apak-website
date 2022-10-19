@@ -37,18 +37,90 @@ body {
   }
 }
 
+.scroll-top-btn {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 16px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #29abe2;
+  border-radius: 50px;
+  background-color: inherit;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-top-btn__icon {
+  transition: all 0.3s ease;
+}
+.scroll-top-btn.active {
+  bottom: 32px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-top-btn:hover {
+  background-color: #ed1e79;
+  border: 2px solid #ed1e79;
+}
+.scroll-top-btn:hover .scroll-top-btn__icon {
+  fill: white;
+}
+.scroll-top-btn:active {
+  transform: scale(0.95);
+}
+
+.contact-popup {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 118px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #29abe2;
+  border-radius: 50px;
+  background-color: inherit;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.contact-popup__icon {
+  transition: all 0.3s ease;
+}
+.contact-popup.active {
+  bottom: 98px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.contact-popup:hover {
+  background-color: #ed1e79;
+  border: 2px solid #ed1e79;
+}
+.contact-popup:hover .contact-popup__icon {
+  fill: white;
+}
+.contact-popup:active {
+  transform: scale(0.95);
+}
+
 .btn {
   position: relative;
   font-family: inherit;
   font-size: inherit;
   min-height: 40px;
   padding: 5px 20px;
-  color: rgb(41, 171, 226);
+  color: #29abe2;
   font-weight: 600;
   line-height: 150%;
   letter-spacing: 0.2px;
   background: none;
-  border: 2px solid rgb(41, 171, 226);
+  border: 2px solid #29abe2;
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -94,10 +166,11 @@ body {
 @media (max-width: 992px) {
   .menu {
     position: absolute;
+    left: 0;
     bottom: 100%;
     height: 100vh;
     width: 100%;
-    background-color: rgb(41, 171, 226);
+    background-color: #29abe2;
     transition: all 0.3s ease;
     overflow: auto;
   }
@@ -135,7 +208,7 @@ body {
 }
 @media (min-width: 992px) {
   .menu__link:hover {
-    color: rgb(41, 171, 226);
+    color: #29abe2;
   }
 }
 @media (max-width: 992px) {
@@ -152,7 +225,7 @@ body {
   width: 0;
   bottom: -2.5px;
   height: 2px;
-  background-color: rgb(41, 171, 226);
+  background-color: #29abe2;
   transition: width 0.3s;
 }
 .menu__link:hover::before {
@@ -186,6 +259,9 @@ body {
   border-radius: 0px 5px 5px 0px;
 }
 
+body {
+  position: relative;
+}
 body.lock {
   overflow: hidden;
 }
@@ -211,6 +287,11 @@ body.lock {
   padding: 10px 10px;
   flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 992px) {
+  .header__container {
+    flex-direction: column-reverse;
+  }
 }
 .header__top {
   display: flex;

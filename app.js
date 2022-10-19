@@ -1,7 +1,9 @@
-/* burger menu */
 const menu = document.querySelector(".menu");
 const burger = document.querySelector(".burger__body");
+const toTop = document.querySelector(".scroll-top-btn");
+const contactBtn = document.querySelector(".contact-popup");
 
+/* burger menu */
 burger.addEventListener("click", () => {
   menu.classList.toggle("active");
   burger.classList.toggle("active");
@@ -14,6 +16,17 @@ menu.querySelectorAll(".menu__link").forEach((link) => {
     burger.classList.remove("active");
     document.body.classList.remove("lock");
   });
+});
+
+/* the appearence of contact popup and scroll to top buttons */
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+    contactBtn.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+    contactBtn.classList.remove("active");
+  }
 });
 
 /* smooth page transition */

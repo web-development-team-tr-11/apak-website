@@ -34,6 +34,88 @@
   }
 }
 
+.scroll-top-btn {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 16px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid $mainColor;
+  border-radius: 50px;
+  background-color: inherit;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &__icon {
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    bottom: 32px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background-color: $secondaryColor;
+    border: 2px solid $secondaryColor;
+
+    .scroll-top-btn__icon {
+      fill: white;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.contact-popup {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: calc(32px + 50px + 36px);
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid $mainColor;
+  border-radius: 50px;
+  background-color: inherit;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &__icon {
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    bottom: calc(32px + 50px + 16px);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background-color: $secondaryColor;
+    border: 2px solid $secondaryColor;
+
+    .contact-popup__icon {
+      fill: white;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 .btn {
   position: relative;
   font-family: inherit;
@@ -97,9 +179,8 @@
 
   @include _992 {
     position: absolute;
+    left: 0;
     bottom: 100%;
-    //top: 0;
-    //right: 100%;
     height: 100vh;
     width: 100%;
     background-color: $mainColor;
@@ -109,7 +190,6 @@
 
   &.active {
     transform: translateY(100%);
-    //right: 0;
   }
 
   &__list {
