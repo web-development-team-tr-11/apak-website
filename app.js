@@ -1,7 +1,8 @@
 const menu = document.querySelector(".menu");
+const social = document.querySelector(".social");
 const burger = document.querySelector(".burger__body");
-const toTop = document.querySelector(".scroll-top-btn");
-const contactBtn = document.querySelector(".contact-popup");
+const options = document.querySelectorAll(".options__item");
+const header = document.querySelector("header");
 
 /* burger menu */
 burger.addEventListener("click", () => {
@@ -18,14 +19,16 @@ menu.querySelectorAll(".menu__link").forEach((link) => {
   });
 });
 
+const headerHeight = header.offsetHeight;
+
 /* the appearence of contact popup and scroll to top buttons */
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-    contactBtn.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-    contactBtn.classList.remove("active");
+  for (let option of options) {
+    if (window.pageYOffset > headerHeight) {
+      option.classList.add("active");
+    } else {
+      option.classList.remove("active");
+    }
   }
 });
 
