@@ -8,10 +8,12 @@ body {
   line-height: 1;
 }
 
+/* variables */
 $textColor: #444444;
 $mainColor: #29abe2;
 $secondaryColor: #ed1e79;
 
+/* mixins */
 @mixin underline($element, $color) {
   #{$element}::before {
     content: "";
@@ -44,6 +46,12 @@ $secondaryColor: #ed1e79;
 
 @mixin min_992 {
   @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin _830 {
+  @media (max-width: 830px) {
     @content;
   }
 }
