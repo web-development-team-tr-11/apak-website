@@ -73,7 +73,10 @@ body {
   }
 
   &__menu {
+    padding: 60px 0px;
     display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
   &__search {

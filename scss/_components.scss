@@ -43,6 +43,7 @@
   gap: 30px;
 
   &__item {
+    position: relative;
     cursor: pointer;
     height: 50px;
     width: 50px;
@@ -74,7 +75,6 @@
 }
 
 .scroll-top-btn {
-  position: relative;
   transform: translateY(16px);
 
   &:hover {
@@ -89,7 +89,6 @@
 }
 
 .contact-popup {
-  position: relative;
   transform: translateY(-16px);
 
   &:hover {
@@ -163,10 +162,6 @@
 /* website navigation */
 .menu {
   @include _992 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
     position: absolute;
     left: 0;
     bottom: 100%;
@@ -182,6 +177,7 @@
   }
 
   &__list {
+    margin: auto;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -224,7 +220,9 @@
 
     @include _992 {
       display: flex;
-      gap: 25px;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
 
       img {
         width: 45px;
