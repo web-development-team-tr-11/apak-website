@@ -50,12 +50,6 @@ $secondaryColor: #ed1e79;
   }
 }
 
-@mixin _830 {
-  @media (max-width: 830px) {
-    @content;
-  }
-}
-
 @mixin _768 {
   @media (max-width: 768px) {
     @content;

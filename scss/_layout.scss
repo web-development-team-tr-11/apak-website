@@ -9,7 +9,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 10px;
 }
 
 .wrapper {
@@ -22,9 +21,21 @@ body {
   background-color: #fafafa;
   width: 100%;
 
-  &__container {
+  &__functions {
     display: flex;
-    padding: 10px 10px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    @include _480 {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+  }
+
+  &__container {
+    padding: 15px 10px 10px;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 
@@ -37,14 +48,53 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+
+    @include _768 {
+      flex-direction: column-reverse;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    &-search {
+      display: none;
+
+      @include _768 {
+        display: flex;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-search {
+      @include _992 {
+        flex: 0 1 33.333%;
+        justify-content: flex-end;
+      }
+
+      @include _768 {
+        display: none;
+      }
+    }
   }
 
   &__contacts {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 35px;
+
+    @include _768 {
+      padding: 0px 15px;
+      justify-content: space-between;
+    }
+
+    @include _480 {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__social {
@@ -56,34 +106,30 @@ body {
     }
   }
 
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
   &__logo {
     display: flex;
-    flex: 0 1 20%;
+
+    @include _992 {
+      flex: 0 1 33.333%;
+    }
 
     img {
       width: 200px;
+
+      @include _480 {
+        width: 175px;
+      }
     }
   }
 
   &__menu {
-    padding: 60px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  &__search {
-    min-height: 35px;
-    display: flex;
-    flex: 0 1 auto;
-    align-items: center;
+    @include _992 {
+      padding: 70px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
   }
 
   &__burger {
@@ -91,8 +137,11 @@ body {
 
     @include _992 {
       display: flex;
-      flex: 0 1 15%;
+      flex: 0 1 33.333%;
       justify-content: flex-end;
+    }
+    @include _768 {
+      flex: none;
     }
   }
 }
@@ -101,6 +150,6 @@ body {
   flex: 1 1 auto;
 }
 
-section {
-  margin-top: 100px;
+section:not(:first-child) {
+  margin-top: 60px;
 }

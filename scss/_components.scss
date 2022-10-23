@@ -6,8 +6,8 @@
     transition: all 0.3s ease;
   }
 
-  @include _992 {
-    &__body {
+  &__body {
+    @include _992 {
       width: 30px;
       height: 30px;
       display: flex;
@@ -31,74 +31,6 @@
         }
       }
     }
-  }
-}
-
-.options {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-  &__item {
-    position: relative;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid $mainColor;
-    border-radius: 50px;
-    background-color: ghostwhite;
-    transition: all 0.3s ease;
-    opacity: 0;
-    pointer-events: none;
-
-    &:hover {
-      background-color: $secondaryColor;
-      border: 2px solid $secondaryColor;
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
-
-    &.active {
-      transform: translateY(0px);
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-}
-
-.scroll-top-btn {
-  transform: translateY(16px);
-
-  &:hover {
-    .scroll-top-btn__icon {
-      fill: white;
-    }
-  }
-
-  &__icon {
-    transition: all 0.3s ease;
-  }
-}
-
-.contact-popup {
-  transform: translateY(-16px);
-
-  &:hover {
-    .contact-popup__icon {
-      fill: white;
-    }
-  }
-
-  &__icon {
-    transition: all 0.3s ease;
   }
 }
 
@@ -130,6 +62,80 @@
 
   &:active {
     transform: scale(0.95);
+  }
+}
+
+.options {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include _768 {
+    bottom: 20px;
+    right: 20px;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $mainColor;
+    border-radius: 50px;
+    background-color: ghostwhite;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      transform: translateY(0px);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &:hover {
+      background-color: $secondaryColor;
+      border: 2px solid $secondaryColor;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.scroll-top-btn {
+  transform: translateY(16px);
+
+  &__icon {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .scroll-top-btn__icon {
+      fill: white;
+    }
+  }
+}
+
+.contact-popup {
+  transform: translateY(-16px);
+
+  &__icon {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .contact-popup__icon {
+      fill: white;
+    }
   }
 }
 
@@ -167,7 +173,7 @@
     bottom: 100%;
     height: 100vh;
     width: 100%;
-    background-color: $mainColor;
+    background-color: white;
     transition: all 0.3s ease;
     overflow: auto;
   }
@@ -177,7 +183,6 @@
   }
 
   &__list {
-    margin: auto;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -199,11 +204,15 @@
     letter-spacing: 0.1px;
     transition: all 0.3s ease;
     &:hover {
+      color: black;
+
       @include min_992 {
         color: $mainColor;
       }
+    }
 
-      color: black;
+    @include min_992 {
+      @include underline("&", $mainColor);
     }
 
     @include _992 {
@@ -211,8 +220,6 @@
       font-size: 24px;
       text-align: center;
     }
-
-    @include underline("&", $mainColor);
   }
 
   &__social {
@@ -234,11 +241,15 @@
 
 /* search input */
 .search {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+
   &__input {
+    min-height: inherit;
+    width: 200px;
     font-size: inherit;
     outline: none;
-    min-height: inherit;
-    max-width: 200px;
     background-color: #e6e6e6;
     padding: 0px 15px;
     border: none;

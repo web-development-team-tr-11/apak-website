@@ -19,9 +19,9 @@ menu.querySelectorAll(".menu__link").forEach((link) => {
   });
 });
 
+/* the appearence of contact popup and scroll to top buttons */
 const headerHeight = header.offsetHeight;
 
-/* the appearence of contact popup and scroll to top buttons */
 window.addEventListener("scroll", () => {
   for (let option of options) {
     if (window.pageYOffset > headerHeight) {
@@ -34,6 +34,7 @@ window.addEventListener("scroll", () => {
 
 /* smooth page transition */
 const anchors = document.querySelectorAll("a[href*='#']");
+
 anchors.forEach((anchor) => {
   anchor.addEventListener("click", (event) => {
     event.preventDefault();
