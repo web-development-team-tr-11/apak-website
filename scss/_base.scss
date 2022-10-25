@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+  background-color: ghostwhite;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* variables */
+$textColor: #444444;
+$mainColor: #29abe2;
+$secondaryColor: #ed1e79;
+
+/* mixins */
+@mixin underline($element, $color) {
+  #{$element}::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -2.5px;
+    height: 2px;
+    background-color: $color;
+    transition: width 0.3s;
+  }
+  #{$element}:hover::before {
+    right: auto;
+    width: 100%;
+    left: 0;
+  }
+}
+
+@mixin _1100 {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin _992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin min_992 {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin _568 {
+  @media (max-width: 568px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin _320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
