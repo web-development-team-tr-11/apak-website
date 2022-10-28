@@ -1,8 +1,8 @@
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   background-color: ghostwhite;
-  font-family: "Open Sans";
+  font-family: "Noto Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
@@ -70,17 +70,23 @@ body {
 
 .options {
   position: fixed;
-  bottom: 35px;
-  right: 35px;
+  bottom: 45px;
+  right: 45px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 @media (max-width: 768px) {
   .options {
+    bottom: 30px;
+    right: 30px;
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .options {
     bottom: 20px;
     right: 20px;
-    gap: 20px;
   }
 }
 .options__item {
@@ -240,7 +246,7 @@ body {
 
 /* search input */
 .search {
-  min-height: 35px;
+  min-height: 40px;
   display: flex;
   align-items: center;
 }
@@ -249,21 +255,30 @@ body {
   width: 200px;
   font-size: inherit;
   outline: none;
-  background-color: #e6e6e6;
+  background: none;
+  border: 2px solid #29abe2;
   padding: 0px 15px;
-  border: none;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 25px 0px 0px 25px;
 }
 .search__btn {
+  position: relative;
   cursor: pointer;
   min-height: inherit;
-  background-color: #c1c1c1;
+  background-color: #29abe2;
   border: none;
   width: 50px;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 25px 25px 0px;
+}
+.search__btn img {
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 
 body {
+  background: rgb(167, 250, 255);
+  background: linear-gradient(50deg, rgb(167, 250, 255) 0%, rgb(198, 245, 255) 25%, rgb(252, 238, 255) 70%, rgb(254, 221, 255) 100%);
+  background-attachment: fixed;
   position: relative;
 }
 body.lock {
@@ -282,8 +297,21 @@ body.lock {
 }
 
 .header {
-  background-color: #fafafa;
+  position: relative;
   width: 100%;
+  z-index: 10;
+}
+.header::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  background-color: rgba(250, 250, 250, 0.5);
 }
 .header__functions {
   display: flex;
@@ -345,6 +373,7 @@ body.lock {
   }
 }
 .header__contacts {
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 35px;
@@ -386,6 +415,9 @@ body.lock {
     width: 175px;
   }
 }
+.header__menu {
+  font-weight: 500;
+}
 @media (max-width: 992px) {
   .header__menu {
     padding: 70px 0px;
@@ -415,6 +447,6 @@ body.lock {
   flex: 1 1 auto;
 }
 
-section:not(:first-child) {
-  margin-top: 60px;
+section:not(:last-child) {
+  margin-bottom: 60px;
 }

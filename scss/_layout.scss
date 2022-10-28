@@ -1,4 +1,13 @@
 body {
+  background: rgb(167, 250, 255);
+  background: linear-gradient(
+    50deg,
+    rgba(167, 250, 255, 1) 0%,
+    rgba(198, 245, 255, 1) 25%,
+    rgba(252, 238, 255, 1) 70%,
+    rgba(254, 221, 255, 1) 100%
+  );
+  background-attachment: fixed;
   position: relative;
 
   &.lock {
@@ -18,8 +27,22 @@ body {
 }
 
 .header {
-  background-color: #fafafa;
+  position: relative;
   width: 100%;
+  z-index: 10;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color: rgba(250, 250, 250, 0.5);
+  }
 
   &__functions {
     display: flex;
@@ -82,6 +105,7 @@ body {
   }
 
   &__contacts {
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 35px;
@@ -123,6 +147,7 @@ body {
   }
 
   &__menu {
+    font-weight: 500;
     @include _992 {
       padding: 70px 0px;
       display: flex;
@@ -150,6 +175,6 @@ body {
   flex: 1 1 auto;
 }
 
-section:not(:first-child) {
-  margin-top: 60px;
+section:not(:last-child) {
+  margin-bottom: 60px;
 }
