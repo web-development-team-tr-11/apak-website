@@ -148,8 +148,255 @@ body {
 
 .main {
   flex: 1 1 auto;
+  z-index: 0;
 }
+.aparatus__items{
+  height: 800px;
 
-section:not(:first-child) {
-  margin-top: 60px;
+  @include _1100{
+      height: 900px;
+  }
+}
+.aparatus__item{   
+    margin-left: 3%;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    position: relative;
+    width: 45%;
+    height: 150px;
+    background-color: $mainColor;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.3em;
+
+    padding: 2%;
+
+    color: #fafafa;
+    &:hover {     
+      top: 20px;
+      left: 20px;
+      background-color: $secondaryColor;
+    }
+    
+    &::before{       
+      position: absolute;
+      content: "";
+
+      width: 100%;
+      height: 150px;
+      top: -10px;
+      left: -10px;
+      background-color: $secondaryColor;
+      z-index: -1;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+    &:hover::before{
+      top: -20px;
+      left: -20px;
+      background-color: $mainColor;
+    }
+    @include _1100{
+      margin-bottom: 30px;
+      font-size: 1.2em;
+    }
+    @include _768{
+      width: 60%;
+    }
+    @include _568{
+      height: 200;
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 30px;
+      line-height: 0.9em;
+      left: 0;
+
+      &::before{
+        left: 0;
+      }
+      &:hover{
+        top: 20px;
+        left: 0px;
+      }
+      &:hover::before{
+        top: -20px;
+        left: 0px;
+      }
+    }
+}
+.aparatus__item:nth-child(2n) {
+  margin-right: 3%;
+  margin-left: auto;
+  top: 10px;
+  left: -10px;
+
+  &::before{ 
+    top: -10px;
+    left: 10px;
+   }
+  &:hover{
+    top: 20px;
+    left: -20px;
+  }
+  &:hover::before{
+    top: -20px;
+    left: 20px;
+  }
+  @include _568{
+    height: 200;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    left: 0;
+
+    &::before{
+      left: 0;
+    }
+    &:hover{
+      top: 20px;
+      left: 0px;
+    }
+    &:hover::before{
+      top: -20px;
+      left: 0px;
+    }
+  }
+}
+.aparatus_designed  li {
+  padding: 5px 10px 0 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 50px;
+  border-left: 20px solid rgba($color: $mainColor, $alpha: 1.0);
+  border-right: 0px solid #fafafa;
+  font-size: 1.3em;
+  transition: all 0.3s ease;
+  margin-left: 3%;
+  margin-right: 3%;
+
+  @include _568{
+    font-size: 1.1em;
+    margin-left: 5%;
+    border-left: 15px solid rgba($color: $mainColor, $alpha: 1.0);
+  }
+  @include _480{
+    font-size: 1.05em;
+  }
+}
+  
+.aparatus_designed  li:nth-child(1n){
+  border-color: $mainColor;
+}
+.aparatus_designed li:nth-child(1n):hover {
+  border-right: 150px solid rgba($color: $secondaryColor, $alpha: 1.0);
+  border-left: 0px solid #fafafa;   
+  @include _568{
+    border-right: 15px solid rgba($color: $secondaryColor, $alpha: 1.0);
+    border-left: 0px solid #fafafa;  
+  }
+}
+.aparatus_designed  li:nth-child(2n){
+  border-color: $secondaryColor;
+}
+.aparatus_designed li:nth-child(2n):hover {
+  border-left: 0px solid #fafafa;  
+  border-right: 150px solid rgba($color: $mainColor, $alpha: 1.0);
+  @include _568{
+    border-left: 0px solid #fafafa;  
+    border-right: 15px solid rgba($color: $mainColor, $alpha: 1.0);
+  }
+}
+.aparatus__definition{
+  border-radius: 10px;
+  height: 300px;
+  margin-left: 3%;
+  margin-right: 3%;
+  transition: all 0.3s ease;
+}
+.definition__item{
+  font-size: 1.3em;
+  background-color: $mainColor;
+  border-radius: 10px;
+  opacity: 0;
+  height: 70px;
+  color: #fafafa;
+  margin-bottom: 10px;
+  padding: 15px;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease, transform 0.3s;
+
+  @include _1100{
+    font-size: 1.1em;
+    height: 80px;
+  }
+  @include _568{
+    height: 100px;
+    font-size: 1em;
+  }
+}
+.definition__item.animation-class{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s;
+}
+.aparatus__Title{
+  clear: right;
+  color: $secondaryColor;
+  font-size: 2.5em;
+  text-align: center;
+  min-height: 100px;
+  margin: 70px 3% 20px 3%;
+
+  @include _1100{
+    font-size: 2.3em;
+  }
+
+  @include _568{
+    font-size: 2em;
+  }
+
+  @include _480{
+    font-size: 1.8em;
+  }
+}
+.aparatus__coplex{
+  height: 400px;
+}
+.center{
+  float: left;
+  width: 50%;
+
+  @include _1100{
+    width: 100%;
+  }
+}
+.aparatus__backInfoAparatus{
+  float: right;
+  width: 50%;
+  height: 250px;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding-top: 50px;
+  font-size: 1.4em;
+  line-height: 30px;
+  padding-left: 50px;
+
+  @include _1100{
+    width: 94%;
+    padding-left: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 70px;
+    padding-top: 30px;
+    margin-bottom: 10%;
+  }
+  @include _768{
+    font-size:1.3em;
+  }
+  @include _568{
+    font-size:1.2em;
+    height: 150px;
+  }
 }
