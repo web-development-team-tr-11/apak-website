@@ -34,6 +34,14 @@
   }
 }
 
+.heading {
+  text-align: center;
+  font-size: 40px;
+  line-height: ((57 / 40) * 100%);
+  font-weight: 700;
+  color: $secondaryColor;
+}
+
 .btn {
   min-height: 40px;
   position: relative;
@@ -146,6 +154,7 @@
 
 /* contacts */
 .contacts {
+  font-weight: 500;
   &__item {
     color: $textColor;
     line-height: calc((24 / 16) * 100%);
@@ -172,6 +181,7 @@
 
 /* website navigation */
 .menu {
+  font-weight: 500;
   @include _992 {
     position: absolute;
     left: 0;
@@ -276,4 +286,7 @@
       left: 30%;
     }
   }
+}
+
+.form-getintouch {
 }
