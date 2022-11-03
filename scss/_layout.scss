@@ -467,12 +467,12 @@ body {
 .aparatus_recomendations:hover  .recomendations__title::after{
   transform: rotate(-90deg);
 }
-.aparatus_recomendations:hover  .recomendations_item{
+.aparatus_recomendations:hover  .list-recomendations_item{
   transition: all 0.5s ease;
   animation: item_animation 0.5s 1;
   opacity: 1;
 }
-.recomendations_item{
+.list-recomendations_item{
   transition: all 0.5s ease;
   line-height: 30px;
   margin-left: 10px;
@@ -496,14 +496,14 @@ body {
     margin-bottom: 30px;
   }
 }
-.aparatus_recomendations:hover  .recomendations_item:nth-child(1){
+.aparatus_recomendations:hover  .list-recomendations_item:nth-child(1){
   color: $textColor;
 
   &::after{
     display: none;
   }
 }
-.recomendations_item:nth-child(1){
+.list-recomendations_item:nth-child(1){
   opacity: 1;
   color: darkgrey;
 

@@ -778,13 +778,13 @@ body.lock {
   transform: rotate(-90deg);
 }
 
-.aparatus_recomendations:hover .recomendations_item {
+.aparatus_recomendations:hover .list-recomendations_item {
   transition: all 0.5s ease;
   animation: item_animation 0.5s 1;
   opacity: 1;
 }
 
-.recomendations_item {
+.list-recomendations_item {
   transition: all 0.5s ease;
   line-height: 30px;
   margin-left: 10px;
@@ -793,37 +793,37 @@ body.lock {
   margin-bottom: 20px;
 }
 @media (max-width: 1100px) {
-  .recomendations_item {
+  .list-recomendations_item {
     font-size: 0.9em;
   }
 }
 @media (max-width: 768px) {
-  .recomendations_item {
+  .list-recomendations_item {
     line-height: 20px;
     font-size: 0.8em;
     margin-bottom: 30px;
   }
 }
 @media (max-width: 568px) {
-  .recomendations_item {
+  .list-recomendations_item {
     line-height: 20px;
     font-size: 0.8em;
     margin-bottom: 30px;
   }
 }
 
-.aparatus_recomendations:hover .recomendations_item:nth-child(1) {
+.aparatus_recomendations:hover .list-recomendations_item:nth-child(1) {
   color: #444444;
 }
-.aparatus_recomendations:hover .recomendations_item:nth-child(1)::after {
+.aparatus_recomendations:hover .list-recomendations_item:nth-child(1)::after {
   display: none;
 }
 
-.recomendations_item:nth-child(1) {
+.list-recomendations_item:nth-child(1) {
   opacity: 1;
   color: darkgrey;
 }
-.recomendations_item:nth-child(1)::after {
+.list-recomendations_item:nth-child(1)::after {
   font-size: 1.5em;
   display: block;
   color: #444444;
