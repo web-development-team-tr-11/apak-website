@@ -458,6 +458,68 @@ body.lock {
   flex: 1 1 auto;
 }
 
+.getintouch__container {
+  padding: 0px 10px;
+  display: grid;
+  grid-template: repeat(2, minmax(min-content, max-content))/repeat(2, 1fr);
+  grid-template-areas: "title title" "contacts form";
+  row-gap: 30px;
+}
+.getintouch__title {
+  grid-area: title;
+}
+.getintouch__items {
+  grid-area: contacts;
+}
+.getintouch__items *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.getintouch__item {
+  display: block;
+  max-width: fit-content;
+  padding-left: 40px;
+  line-height: 150%;
+}
+.getintouch__item--phone {
+  background: url(../img/getintouch/phone.svg) 0 0 no-repeat;
+}
+.getintouch__item--email {
+  background: url(../img/getintouch/email.svg) 0 0 no-repeat;
+}
+.getintouch__item--adress {
+  background: url(../img/getintouch/adress.svg) 0 0 no-repeat;
+}
+.getintouch__map {
+  max-width: 85%;
+}
+.getintouch__form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1100px) {
+  .getintouch__form {
+    width: 94%;
+    padding-left: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 70px;
+    padding-top: 30px;
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .getintouch__form {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 568px) {
+  .getintouch__form {
+    font-size: 1.2em;
+    height: 150px;
+  }
+}
+
 .about-aparatus__infoAparatus {
   float: right;
   width: 50%;
