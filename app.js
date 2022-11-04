@@ -3,6 +3,22 @@ const social = document.querySelector(".social");
 const burger = document.querySelector(".burger__body");
 const options = document.querySelectorAll(".options__item");
 const header = document.querySelector("header");
+const scrollitem = document.querySelectorAll(".scroll-item");
+
+/*scrollAnimation*/
+
+const scrollAnimation = () => {
+  let windowCenter = window.innerHeight / 2 + window.scrollY;
+
+  scrollitem.forEach((el) => {
+    let scrollOffset = el.offsetTop / 1.5 + el.offsetHeight / 2;
+    if (windowCenter >= scrollOffset) {
+      el.classList.add("animation-class");
+    } else {
+      el.classList.remove("animation-class");
+    }
+  });
+};
 
 /* burger menu */
 burger.addEventListener("click", () => {
@@ -21,8 +37,9 @@ menu.querySelectorAll(".menu__link").forEach((link) => {
 
 /* the appearence of contact popup and scroll to top buttons */
 const headerHeight = header.offsetHeight;
-
+scrollAnimation();
 window.addEventListener("scroll", () => {
+  scrollAnimation();
   for (let option of options) {
     if (window.pageYOffset > headerHeight) {
       option.classList.add("active");
