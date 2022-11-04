@@ -573,6 +573,119 @@ body {
   @include _1100 {
     font-size: 0.9em;
   }
+  @include _768 {
+    line-height: 20px;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+  }
+
+  @include _568 {
+    line-height: 20px;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+  }
+}
+.aparatus_recomendations:hover .list-recomendations_item:nth-child(1) {
+  color: $textColor;
+
+  &::after {
+    display: none;
+  }
+}
+.list-recomendations_item:nth-child(1) {
+  opacity: 1;
+  color: darkgrey;
+
+  &::after {
+    font-size: 1.5em;
+    display: block;
+    color: $textColor;
+    content: "...";
+  }
+}
+@keyframes item_animation {
+  0% {
+    margin-bottom: -40px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
+}
+@keyframes item1_animation {
+  0% {
+    margin-bottom: 20px;
+  }
+  100% {
+    margin-bottom: -40px;
+  }
+}
+
+.about__container{
+  height: 350px;
+}
+
+.about__aboutText{
+  float: left;
+  margin: 20px;
+  margin-top: 40px;
+  width: 800px;
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: $mainColor;
+  letter-spacing: 0.2px;
+  background: none;
+  border: 5px solid $mainColor;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.aboutText__title{
+  font-size: 24px;
+  margin: 30px;
+}
+
+.aboutText__container{
+  margin-bottom: -5px;
+  margin-left: -5px;
+  width: 800px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #fff;
+  letter-spacing: 0.2px;
+  background: $secondaryColor;
+  border: 6px solid $secondaryColor;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.aboutText__info{
+  font-size: 16px;
+  margin: 10px;
+}
+
+.image3D__image{
+  float: left;
+  margin: 30px;
+  width: 25%;
+  height: 25%;
+}
+
+.method__container{
+  margin-top: -90px;
+  height: 600px;
+}
+
+.methodImageRight__image{
+  color: $mainColor;
+  float: left;
+  margin: 30px;
+  width: 7%;
+  height: 7%;
+}
 
   @include _768 {
     line-height: 20px;
@@ -734,6 +847,7 @@ th, td{
   border-style: solid;
   border-width: 0 6px 6px 0;
   border-color: #fafafa;
+
 }
 td{
   background: rgba($color: $mainColor, $alpha: 0.3);
