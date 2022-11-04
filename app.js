@@ -7,19 +7,17 @@ const scrollitem = document.querySelectorAll(".scroll-item");
 
 /*scrollAnimation*/
 
-const scrollAnimation = ()=>{
-    let windowCenter = (window.innerHeight/2)+window.scrollY;
+const scrollAnimation = () => {
+  let windowCenter = window.innerHeight / 2 + window.scrollY;
 
-    scrollitem.forEach(el=>{
-      let scrollOffset = (el.offsetTop/1.5) + (el.offsetHeight/2);
-      if(windowCenter >= scrollOffset){
-          el.classList.add('animation-class');
-      }
-      else{
-        el.classList.remove('animation-class');
-      }
-    })
-
+  scrollitem.forEach((el) => {
+    let scrollOffset = el.offsetTop / 1.5 + el.offsetHeight / 2;
+    if (windowCenter >= scrollOffset) {
+      el.classList.add("animation-class");
+    } else {
+      el.classList.remove("animation-class");
+    }
+  });
 };
 
 /* burger menu */
