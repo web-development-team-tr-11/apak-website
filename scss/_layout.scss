@@ -172,64 +172,57 @@ body {
 .main {
   z-index: 0;
   flex: 1 1 auto;
-
-  .getintouch {
-    &__container {
-      padding: 0px 10px;
-      display: grid;
-      grid-template: repeat(2, minmax(min-content, max-content)) / repeat(
-          2,
-          1fr
-        );
-      grid-template-areas:
-        "title title"
-        "contacts form";
-      row-gap: 30px;
-    }
-
-    &__title {
-      grid-area: title;
-    }
-
-    &__items {
-      grid-area: contacts;
-
-      *:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-
-    &__item {
-      display: block;
-      max-width: fit-content;
-      padding-left: 40px;
-      line-height: calc((24 / 16) * 100%);
-
-      &--phone {
-        background: url(../img/getintouch/phone.svg) 0 0 no-repeat;
-      }
-
-      &--email {
-        background: url(../img/getintouch/email.svg) 0 0 no-repeat;
-      }
-
-      &--adress {
-        background: url(../img/getintouch/adress.svg) 0 0 no-repeat;
-      }
-    }
-
-    &__map {
-      max-width: 85%;
-    }
-
-    &__form {
-      grid-area: form;
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
 
-section:not(:last-child) {
-  margin-bottom: 60px;
+.getintouch {
+  &__container {
+    padding: 0px 10px;
+    display: grid;
+    grid-template: repeat(2, minmax(min-content, max-content)) / repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "contacts form";
+    row-gap: 30px;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__items {
+    grid-area: contacts;
+
+    *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    display: block;
+    max-width: fit-content;
+    padding-left: 40px;
+    line-height: calc((24 / 16) * 100%);
+
+    &--phone {
+      background: url(../img/getintouch/phone.svg) 0 0 no-repeat;
+    }
+
+    &--email {
+      background: url(../img/getintouch/email.svg) 0 0 no-repeat;
+    }
+
+    &--adress {
+      background: url(../img/getintouch/adress.svg) 0 0 no-repeat;
+    }
+  }
+
+  &__map {
+    max-width: 85%;
+  }
+
+  &__form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+  }
 }
