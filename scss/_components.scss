@@ -288,5 +288,52 @@
   }
 }
 
+.method__methodLeft {
+  float: left;
+  margin: 20px;
+  width: 1000px;
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 15px 20px;
+  color: $mainColor;
+  letter-spacing: 0.2px;
+  background: none;
+  border: 4px solid $mainColor;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: $mainColor;
+    border: 4px solid $mainColor;
+    color: #fff;
+  }
+}
+
+.method__methodRight {
+  float: right;
+  margin: 20px;
+  width: 1000px;
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 15px 20px;
+  color: $secondaryColor;
+  letter-spacing: 0.2px;
+  background: none;
+  border: 4px solid $secondaryColor;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondaryColor;
+    border: 4px solid $secondaryColor;
+    color: #fff;
+  }
+}
 .form-getintouch {
 }
