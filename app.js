@@ -3,14 +3,50 @@ const social = document.querySelector(".social");
 const burger = document.querySelector(".burger__body");
 const options = document.querySelectorAll(".options__item");
 const header = document.querySelector("header");
-const scrollitem = document.querySelectorAll(".scroll-item");
+const scrollItem = document.querySelectorAll(".scroll-item");
+
+const form = document.querySelector("#form");
+const formInputs = document.querySelectorAll(
+  ".form-getintouch__input--important"
+);
+const email = document.querySelector("#email");
+
+//form validation
+form.addEventListener("submit", (e) => {
+  checkInputs();
+  const emptyInputs = Array.from(formInputs).filter(
+    (input) => input.value === ""
+  );
+  if (emptyInputs.length !== 0) {
+    e.preventDefault();
+  }
+});
+
+const checkInputs = () => {
+  const emailValue = email.value.trim();
+
+  formInputs.forEach(function (input) {
+    if (input.value === "") {
+      input.classList.add("error");
+    } else if (email.value !== "" && !isValidEmail(emailValue)) {
+      email.classList.add("error");
+    } else {
+      input.classList.remove("error");
+    }
+  });
+};
+
+//email validation
+const isValidEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
 
 /*scrollAnimation*/
-
 const scrollAnimation = () => {
   let windowCenter = window.innerHeight / 2 + window.scrollY;
-
-  scrollitem.forEach((el) => {
+  scrollItem.forEach((el) => {
     let scrollOffset = el.offsetTop / 1.5 + el.offsetHeight / 2;
     if (windowCenter >= scrollOffset) {
       el.classList.add("animation-class");
