@@ -173,6 +173,7 @@ body {
   z-index: 0;
   flex: 1 1 auto;
 }
+
 .getintouch {
   &__container {
     padding: 0px 10px;
@@ -180,8 +181,16 @@ body {
     grid-template: repeat(2, minmax(min-content, max-content)) / repeat(2, 1fr);
     grid-template-areas:
       "title title"
-      "contacts form";
+      "contacts feedback";
     row-gap: 30px;
+
+    @include _992 {
+      grid-template: repeat(2, minmax(min-content, max-content)) / 1fr;
+      grid-template-areas:
+        "title"
+        "contacts"
+        "feedback";
+    }
   }
 
   &__title {
@@ -216,31 +225,15 @@ body {
   }
 
   &__map {
-    max-width: 85%;
+    max-width: 90%;
   }
 
-  &__form {
-    grid-area: form;
-    display: flex;
-    flex-direction: column;
-    @include _1100 {
-      width: 94%;
-      padding-left: 3%;
-      margin-left: 3%;
-      margin-right: 3%;
-      height: 70px;
-      padding-top: 30px;
-      margin-bottom: 10%;
-    }
-    @include _768 {
-      font-size: 1.3em;
-    }
-    @include _568 {
-      font-size: 1.2em;
-      height: 150px;
-    }
+  &__feedback {
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
+
 .about-aparatus__infoAparatus {
   float: right;
   width: 50%;
@@ -251,6 +244,7 @@ body {
   font-size: 1.4em;
   line-height: 30px;
   padding-left: 50px;
+
   @include _1100 {
     width: 94%;
     padding-left: 3%;
@@ -260,14 +254,17 @@ body {
     padding-top: 30px;
     margin-bottom: 10%;
   }
+
   @include _768 {
     font-size: 1.3em;
   }
+
   @include _568 {
     font-size: 1.2em;
     height: 150px;
   }
 }
+
 .aparatus__definition {
   border-radius: 10px;
   height: 300px;
@@ -275,6 +272,7 @@ body {
   margin-right: 3%;
   transition: all 0.3s ease;
 }
+
 .definition__item {
   font-size: 1.3em;
   background-color: $mainColor;
@@ -291,16 +289,19 @@ body {
     font-size: 1.1em;
     height: 80px;
   }
+
   @include _568 {
     height: 100px;
     font-size: 1em;
   }
 }
+
 .definition__item.animation-class {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s;
 }
+
 .aparatus__advantages {
   height: 800px;
 
@@ -308,6 +309,7 @@ body {
     height: 900px;
   }
 }
+
 .advantage__item {
   margin-left: 3%;
   top: 10px;
@@ -344,18 +346,22 @@ body {
     transition: all 0.3s ease;
     border-radius: 10px;
   }
+
   &:hover::before {
     top: -20px;
     left: -20px;
     background-color: $mainColor;
   }
+
   @include _1100 {
     margin-bottom: 30px;
     font-size: 1.2em;
   }
+
   @include _768 {
     width: 60%;
   }
+
   @include _568 {
     height: 200;
     width: 80%;
@@ -367,16 +373,19 @@ body {
     &::before {
       left: 0;
     }
+
     &:hover {
       top: 20px;
       left: 0px;
     }
+
     &:hover::before {
       top: -20px;
       left: 0px;
     }
   }
 }
+
 .advantage__item:nth-child(2n) {
   margin-right: 3%;
   margin-left: auto;
@@ -387,14 +396,17 @@ body {
     top: -10px;
     left: 10px;
   }
+
   &:hover {
     top: 20px;
     left: -20px;
   }
+
   &:hover::before {
     top: -20px;
     left: 20px;
   }
+
   @include _568 {
     height: 200;
     width: 80%;
@@ -405,16 +417,19 @@ body {
     &::before {
       left: 0;
     }
+
     &:hover {
       top: 20px;
       left: 0px;
     }
+
     &:hover::before {
       top: -20px;
       left: 0px;
     }
   }
 }
+
 .aparatus__where-to-use li {
   padding: 5px 10px 0 8px;
   margin-bottom: 10px;
@@ -433,6 +448,7 @@ body {
     margin-left: 5%;
     border-left: 15px solid rgba($color: $mainColor, $alpha: 1);
   }
+
   @include _480 {
     font-size: 1.05em;
   }
@@ -441,25 +457,31 @@ body {
 .aparatus__where-to-use li:nth-child(1n) {
   border-color: $mainColor;
 }
+
 .aparatus__where-to-use li:nth-child(1n):hover {
   border-right: 150px solid rgba($color: $secondaryColor, $alpha: 1);
   border-left: 0px solid #fafafa;
+
   @include _568 {
     border-right: 15px solid rgba($color: $secondaryColor, $alpha: 1);
     border-left: 0px solid #fafafa;
   }
 }
+
 .aparatus__where-to-use li:nth-child(2n) {
   border-color: $secondaryColor;
 }
+
 .aparatus__where-to-use li:nth-child(2n):hover {
   border-left: 0px solid #fafafa;
   border-right: 150px solid rgba($color: $mainColor, $alpha: 1);
+
   @include _568 {
     border-left: 0px solid #fafafa;
     border-right: 15px solid rgba($color: $mainColor, $alpha: 1);
   }
 }
+
 .aparatus__title {
   clear: right;
   color: $secondaryColor;
@@ -480,9 +502,11 @@ body {
     font-size: 1.8em;
   }
 }
+
 .aparatus__about {
   height: 400px;
 }
+
 .about-aparatus__image {
   float: left;
   width: 50%;
@@ -491,6 +515,7 @@ body {
     width: 100%;
   }
 }
+
 .aparatus_recomendations {
   height: 200px;
   background-color: rgba($color: $textColor, $alpha: 0.2);
@@ -507,14 +532,17 @@ body {
     @include _768 {
       height: 500px;
     }
+
     @include _568 {
       height: 530px;
     }
+
     @include _480 {
       height: 570px;
     }
   }
 }
+
 .recomendations__title {
   margin-top: 100px;
   padding: 5px;
@@ -548,20 +576,24 @@ body {
     font-size: 1.8em;
   }
 }
+
 .recomendations__wrapper {
   margin-top: 40px;
   text-align: left;
   top: 0;
   left: 0;
 }
+
 .aparatus_recomendations:hover .recomendations__title::after {
   transform: rotate(-90deg);
 }
+
 .aparatus_recomendations:hover .list-recomendations_item {
   transition: all 0.5s ease;
   animation: item_animation 0.5s 1;
   opacity: 1;
 }
+
 .list-recomendations_item {
   transition: all 0.5s ease;
   line-height: 30px;
@@ -573,12 +605,14 @@ body {
   @include _1100 {
     font-size: 0.9em;
   }
+
   @include _768 {
     line-height: 20px;
     font-size: 0.8em;
     margin-bottom: 30px;
   }
 }
+
 .aparatus_recomendations:hover .list-recomendations_item:nth-child(1) {
   color: $textColor;
 
@@ -586,6 +620,7 @@ body {
     display: none;
   }
 }
+
 .list-recomendations_item:nth-child(1) {
   opacity: 1;
   color: darkgrey;
@@ -597,32 +632,36 @@ body {
     content: "...";
   }
 }
+
 @keyframes item_animation {
   0% {
     margin-bottom: -40px;
   }
+
   100% {
     margin-bottom: 20px;
   }
 }
+
 @keyframes item1_animation {
   0% {
     margin-bottom: 20px;
   }
+
   100% {
     margin-bottom: -40px;
   }
 }
 
 .about__container {
-  height: 350px;
+  min-height: 350px;
 }
 
 .about__aboutText {
   float: left;
   margin: 20px;
   margin-top: 40px;
-  width: 800px;
+  max-width: 800px;
   position: relative;
   font-family: inherit;
   font-size: inherit;
@@ -643,7 +682,7 @@ body {
 .aboutText__container {
   margin-bottom: -5px;
   margin-left: -5px;
-  width: 800px;
+  max-width: 800px;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
@@ -680,6 +719,7 @@ body {
   width: 7%;
   height: 7%;
 }
+
 .aparatus_recomendations:hover .list-recomendations_item:nth-child(1) {
   color: $textColor;
 
@@ -687,6 +727,7 @@ body {
     display: none;
   }
 }
+
 .list-recomendations_item:nth-child(1) {
   opacity: 1;
   color: darkgrey;
@@ -698,10 +739,12 @@ body {
     content: "...";
   }
 }
+
 @keyframes item_animation {
   0% {
     margin-bottom: -40px;
   }
+
   100% {
     margin-bottom: 20px;
   }
@@ -710,20 +753,21 @@ body {
   0% {
     margin-bottom: 20px;
   }
+
   100% {
     margin-bottom: -40px;
   }
 }
 
 .about__container {
-  height: 350px;
+  max-height: 350px;
 }
 
 .about__aboutText {
   float: left;
   margin: 20px;
   margin-top: 40px;
-  width: 800px;
+  max-width: 800px;
   position: relative;
   font-family: inherit;
   font-size: inherit;
@@ -744,7 +788,7 @@ body {
 .aboutText__container {
   margin-bottom: -5px;
   margin-left: -5px;
-  width: 800px;
+  max-width: 800px;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
@@ -789,95 +833,117 @@ body {
   width: 7%;
   height: 7%;
 }
+
 .bold {
   font-weight: bold;
   color: white;
   background-color: rgba($color: $secondaryColor, $alpha: 1);
   font-size: x-large;
+
   @include _568 {
     text-align: right;
   }
 }
+
 .tablecontainer__table {
   font-family: sans-serif;
   font-size: 1.1em;
   border-collapse: collapse;
   width: 100%;
   line-height: 1.2;
+
   @include _1100 {
     margin-left: 3%;
     padding-right: 3%;
     width: 94%;
   }
+
   @include _568 {
     font-size: 0.8em;
   }
 }
+
 .table__rightside {
   text-align: center;
   padding: 5px;
   color: black;
   background: rgba($color: $mainColor, $alpha: 0.3);
 }
+
 th,
 td:first-child {
   background: rgba($color: $mainColor, $alpha: 0.8);
   color: #fafafa;
   padding: 10px 20px;
 }
+
 th,
 td {
   border-style: solid;
   border-width: 0 6px 6px 0;
   border-color: #fafafa;
 }
+
 td {
   background: rgba($color: $mainColor, $alpha: 0.3);
 }
+
 td:first-child,
 th:first-child {
   text-align: left;
 }
+
 .tablecontainer__table tr {
   transition: all 0.2s;
 }
+
 .tablecontainer__table tr:hover {
   box-shadow: 0 5px 15px rgba($color: $mainColor, $alpha: 1);
   height: 45px;
   line-height: 45px;
   font-size: 1.11em;
 }
+
 .table__parameters-left {
   width: 20%;
   display: inline-block;
+
   @include _1100 {
     width: 100%;
   }
 }
+
 .table__parameters-right {
   float: right;
   width: 80%;
+
   @include _1100 {
     width: 100%;
   }
 }
+
 .table__parameters_one {
   float: left;
   width: 20%;
+
   @include _1100 {
     width: 100%;
   }
 }
+
 .table__parameters-two {
   float: right;
   width: 80%;
+
   @include _1100 {
     width: 100%;
   }
 }
+
 .aparatus__container-unique {
   padding: 15px;
 }
+
 .aparatus__container-title {
   cursor: pointer;
   text-decoration: none;
@@ -888,13 +954,16 @@ th:first-child {
   min-height: 50px;
   margin: 70px 3% 0px 3%;
   position: relative;
+
   @include _1100 {
     font-size: 1.9em;
     font-weight: 600;
   }
+
   @include _768 {
     font-size: 1.6;
   }
+
   @include _568 {
     font-size: 1.45em;
     font-weight: 700;
@@ -904,16 +973,20 @@ th:first-child {
     font-size: 1.3em;
   }
 }
+
 .aparatus__container-title:hover {
   color: $secondaryColor;
 }
+
 .aparatus__container-title:hover:before {
   width: 100%;
   transform: scale(1);
+
   @include _1100 {
     display: none;
   }
 }
+
 .aparatus__container-title:before {
   content: "";
   width: 100%;
@@ -924,15 +997,18 @@ th:first-child {
   bottom: 8px;
   transform: scale(0);
   transition: all 0.3s;
+
   @include _1100 {
     display: none;
   }
 }
+
 .aparatus__unique-left {
   width: 32%;
   float: left;
   padding-right: 30px;
   margin-left: auto;
+
   @include _1100 {
     width: 100%;
     clear: left;
@@ -940,31 +1016,38 @@ th:first-child {
     padding-right: 0px;
   }
 }
+
 .aparatus__unique-center {
   display: inline-block;
   padding-top: 15px;
+
   @include _1100 {
     display: none;
   }
 }
+
 .aparatus__unique-right {
   float: right;
   width: 32%;
   margin-left: auto;
+
   @include _1100 {
     width: 100%;
     clear: right;
     text-align: left;
   }
 }
+
 .unique-center__photo {
   max-width: 100%;
   width: 370px;
   height: 775px;
+
   @include _1100 {
     display: none;
   }
 }
+
 .aparatus__circle {
   transition: all 0.2s;
   height: 50px;
@@ -978,12 +1061,14 @@ th:first-child {
   font-size: 1.5em;
   margin: 5px;
   font-weight: 900;
+
   @include _768 {
     height: 40px;
     width: 40px;
     font-size: 1.2em;
     padding: 9px;
   }
+
   @include _480 {
     font-size: 1.1em;
     height: 32px;
@@ -993,40 +1078,50 @@ th:first-child {
     margin: 3px;
   }
 }
+
 .aparatus__circle:hover {
   background-color: $secondaryColor;
   box-shadow: 0 5px 15px rgba($color: $secondaryColor, $alpha: 1);
 }
+
 .aparatus__circle--pink {
   transition: all 0.3s;
   background-color: rgba($color: $secondaryColor, $alpha: 1);
 }
+
 .aparatus__circle--pink:hover {
   background-color: $mainColor;
   box-shadow: 0 5px 15px rgba($color: $mainColor, $alpha: 1);
 }
+
 .aparatus__container-left-text {
   font-size: 1.1em;
   padding: 10px;
   text-align: left;
+
   @include _1100 {
     padding: 15px;
   }
 }
+
 .aparatus__container-right-text {
   font-size: 1.1em;
   padding: 35px;
   text-align: left;
+
   @include _1100 {
     padding: 15px;
   }
 }
+
 .bold-text {
   font-weight: 600;
+
   @include _480 {
     font-weight: 500;
   }
 }
+
 .aparatus_paragraph {
   @include _1100 {
     margin-left: 35px;

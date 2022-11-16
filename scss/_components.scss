@@ -25,6 +25,7 @@
           &:first-child {
             transform: rotate(-45deg);
           }
+
           &:last-child {
             transform: rotate(45deg);
           }
@@ -36,8 +37,8 @@
 
 .heading {
   text-align: center;
-  font-size: 40px;
-  line-height: ((57 / 40) * 100%);
+  font-size: 36px;
+  line-height: ((57 / 36) * 100%);
   font-weight: 700;
   color: $secondaryColor;
 }
@@ -291,7 +292,7 @@
 .method__methodLeft {
   float: left;
   margin: 20px;
-  width: 1000px;
+  max-width: 1000px;
   position: relative;
   font-family: inherit;
   font-size: inherit;
@@ -335,5 +336,62 @@
     color: #fff;
   }
 }
+
+.feedback {
+  grid-area: feedback;
+
+  &__form {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+  }
+}
+
 .form-getintouch {
+  font-family: inherit;
+
+  &__heading {
+    text-align: center;
+    font-size: 24px;
+    line-height: ((36 / 24) * 100%);
+    font-weight: 600;
+    color: $secondaryColor;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background: none;
+    padding: 5px 12px;
+    border: 2px solid $mainColor;
+    border-radius: 15px;
+
+    &.error {
+      border: 2px solid rgb(230, 0, 0);
+    }
+  }
+
+  &__textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.item-important {
+  color: red;
 }
