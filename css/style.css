@@ -336,8 +336,9 @@ body {
 }
 
 .feedback {
-  grid-area: feedback;
+  width: 100%;
 }
+
 .form-getintouch {
   font-family: inherit;
 }
@@ -555,7 +556,7 @@ body.lock {
   display: grid;
   grid-template: repeat(2, minmax(min-content, max-content))/repeat(2, 1fr);
   grid-template-areas: "title title" "contacts feedback";
-  row-gap: 30px;
+  gap: 30px;
 }
 @media (max-width: 992px) {
   .getintouch__container {
@@ -568,9 +569,31 @@ body.lock {
 }
 .getintouch__items {
   grid-area: contacts;
+  display: flex;
+  flex-direction: column;
 }
 .getintouch__items *:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .getintouch__items {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .getintouch__items {
+    flex-direction: column;
+  }
+}
+.getintouch__contacts {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .getintouch__contacts {
+    align-items: center;
+  }
 }
 .getintouch__item {
   display: block;
@@ -588,9 +611,10 @@ body.lock {
   background: url(../img/getintouch/adress.svg) 0 0 no-repeat;
 }
 .getintouch__map {
-  max-width: 90%;
+  width: 100%;
 }
 .getintouch__feedback {
+  grid-area: feedback;
   max-width: 400px;
   margin: 0 auto;
 }

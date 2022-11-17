@@ -156,6 +156,7 @@
 /* contacts */
 .contacts {
   font-weight: 500;
+
   &__item {
     color: $textColor;
     line-height: calc((24 / 16) * 100%);
@@ -338,13 +339,7 @@
 }
 
 .feedback {
-  grid-area: feedback;
-
-  &__form {
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-  }
+  width: 100%;
 }
 
 .form-getintouch {
