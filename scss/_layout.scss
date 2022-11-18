@@ -202,10 +202,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    *:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
     @include _992 {
       flex-direction: row;
       gap: 20px;
@@ -213,12 +209,14 @@ body {
 
     @include _768 {
       flex-direction: column;
+      gap: 10px;
     }
   }
 
   &__contacts {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 
     @include _768 {
       align-items: center;
@@ -246,6 +244,11 @@ body {
 
   &__map {
     width: 100%;
+    margin-bottom: 20px;
+
+    @include _992 {
+      margin-bottom: none;
+    }
   }
 
   &__feedback {
@@ -621,7 +624,9 @@ body {
   margin-left: 10px;
   opacity: 0;
   animation: item1_animation 0.5s 1;
-  margin-bottom: 20px;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 
   @include _1100 {
     font-size: 0.9em;
@@ -1146,5 +1151,15 @@ th:first-child {
 .aparatus_paragraph {
   @include _1100 {
     margin-left: 35px;
+  }
+}
+
+.partners {
+  &__carousel {
+    padding: 50px 0px;
+
+    @include _992 {
+      margin: 0px 25px;
+    }
   }
 }

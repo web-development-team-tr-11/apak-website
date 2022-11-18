@@ -43,7 +43,7 @@ body {
   text-align: center;
   font-size: 36px;
   line-height: 158.3333333333%;
-  font-weight: 700;
+  font-weight: 600;
   color: #ed1e79;
 }
 
@@ -377,9 +377,27 @@ body {
   min-height: 120px;
   resize: vertical;
 }
+.form-getintouch__btn {
+  margin: 0 auto;
+}
 
-.item-important {
-  color: red;
+.carousel__image {
+  text-align: center;
+}
+.carousel__image img {
+  width: 220px;
+  height: 220px;
+}
+@media (max-width: 768px) {
+  .carousel__image img {
+    width: 165px;
+    height: 165px;
+  }
+}
+.carousel__nav-btn::after {
+  color: #ed1e79;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 body {
@@ -572,9 +590,6 @@ body.lock {
   display: flex;
   flex-direction: column;
 }
-.getintouch__items *:not(:last-child) {
-  margin-bottom: 20px;
-}
 @media (max-width: 992px) {
   .getintouch__items {
     flex-direction: row;
@@ -584,11 +599,13 @@ body.lock {
 @media (max-width: 768px) {
   .getintouch__items {
     flex-direction: column;
+    gap: 10px;
   }
 }
 .getintouch__contacts {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .getintouch__contacts {
@@ -612,6 +629,12 @@ body.lock {
 }
 .getintouch__map {
   width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .getintouch__map {
+    margin-bottom: none;
+  }
 }
 .getintouch__feedback {
   grid-area: feedback;
@@ -993,6 +1016,8 @@ body.lock {
   margin-left: 10px;
   opacity: 0;
   animation: item1_animation 0.5s 1;
+}
+.list-recomendations_item:not(:last-of-type) {
   margin-bottom: 20px;
 }
 @media (max-width: 1100px) {
@@ -1531,5 +1556,14 @@ th:first-child {
 @media (max-width: 1100px) {
   .aparatus_paragraph {
     margin-left: 35px;
+  }
+}
+
+.partners__carousel {
+  padding: 50px 0px;
+}
+@media (max-width: 992px) {
+  .partners__carousel {
+    margin: 0px 25px;
   }
 }

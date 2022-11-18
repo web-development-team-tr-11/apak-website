@@ -59,6 +59,8 @@ const scrollAnimation = () => {
 /* burger menu */
 burger.addEventListener("click", () => {
   menu.classList.toggle("active");
+  menu.style.zIndex = 10;
+  burger.style.zIndex = 20;
   burger.classList.toggle("active");
   document.body.classList.toggle("lock");
 });
@@ -99,4 +101,28 @@ anchors.forEach((anchor) => {
       block: "start",
     });
   });
+});
+
+//carousel menu
+new Swiper(".swiper", {
+  slidesPerView: 1,
+  direction: "horizontal",
+  loop: true,
+  initialSlide: 0,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  },
 });

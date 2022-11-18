@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body id="body">
@@ -78,13 +82,13 @@
               </ul>
               <div class="menu__social social">
                 <a href="" class="social__item">
-                  <img src="img/facebook.svg" alt="facebook" />
+                  <img src="img/social/facebook.svg" alt="facebook" />
                 </a>
                 <a href="" class="social__item">
-                  <img src="img/telegram.svg" alt="telegram" />
+                  <img src="img/social/telegram.svg" alt="telegram" />
                 </a>
                 <a href="" class="social__item">
-                  <img src="img/viber.svg" alt="viber" />
+                  <img src="img/social/viber.svg" alt="viber" />
                 </a>
               </div>
             </nav>
@@ -573,59 +577,28 @@
         </section>
         <section id="partners" class="main__partners partners">
           <div class="partners__container container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos vero
-            provident ipsam asperiores modi quas soluta in voluptatum, fugiat
-            repudiandae consectetur magnam assumenda nostrum reprehenderit
-            placeat pariatur est? Veniam, laborum. Iusto suscipit quaerat
-            provident quas. Illum laboriosam molestiae impedit voluptate
-            excepturi nisi cumque quas earum autem? Delectus optio quibusdam
-            quod labore. Quos facilis vitae rem amet perspiciatis placeat quo
-            odit. Minima modi quidem vero voluptatum velit! Incidunt, laudantium
-            soluta. Sed dolor voluptatum molestiae cum, sit alias sint
-            consequuntur minima doloremque, recusandae temporibus, accusantium
-            deserunt dolores laborum odio! Officia, natus illo. Commodi quos
-            natus incidunt, nulla eos velit facere vitae officia facilis
-            consectetur molestiae autem sequi quam, labore harum porro magnam
-            eveniet, vero eaque et! Expedita blanditiis natus itaque doloremque
-            totam. Et tenetur nostrum quisquam sapiente tempora modi possimus
-            voluptatum quo quidem fugit consequatur, officiis exercitationem
-            placeat eum quas omnis cum soluta, accusamus neque perferendis illo
-            minus, eos suscipit. Similique, in! Mollitia aliquam itaque nam
-            saepe praesentium. Quos id earum, illum vitae sint veritatis
-            reprehenderit soluta cumque nihil, maxime incidunt cum excepturi
-            quo, ipsam ipsum exercitationem! Rerum repellendus officiis
-            assumenda est. Eum molestiae animi earum quo maiores voluptate aut
-            iure, officia explicabo quos, unde tempore, quas esse laborum sed
-            porro perspiciatis aperiam obcaecati! Eos enim similique officia
-            saepe dignissimos iusto nostrum? Aperiam architecto reprehenderit,
-            accusamus ea perferendis nesciunt totam libero deserunt repellendus
-            quisquam ex itaque tempore labore recusandae cum pariatur alias ipsa
-            quae. Eos impedit tenetur vel? Magnam ducimus consequatur voluptate!
-            Eos eaque perspiciatis excepturi ut repellendus? Aspernatur quam
-            nisi, odio obcaecati magnam nemo quo. Aliquam, similique! Iure
-            minus, similique exercitationem veniam, enim expedita dicta beatae
-            cumque vitae fugit, est illo. Veritatis beatae, minus quod aliquam
-            sunt vero debitis pariatur repudiandae deserunt, aliquid
-            necessitatibus excepturi rerum quae est qui recusandae ut quos.
-            Facilis asperiores praesentium reprehenderit hic consequuntur
-            eveniet perferendis cupiditate? Deserunt odit voluptate doloremque!
-            Accusamus excepturi, animi magnam, nisi at laboriosam reprehenderit
-            ex soluta cupiditate asperiores quisquam, rem natus nemo! Qui
-            dolores eius ut quas amet tenetur numquam dignissimos odio! Nobis
-            molestiae, commodi officiis fugiat praesentium illo nisi harum
-            minima esse optio magnam, ducimus porro. Totam cupiditate, ipsum hic
-            nihil error eligendi, officia commodi iste architecto neque numquam
-            sit cum! Ipsa veritatis debitis, iste ad ex consectetur, maxime nam
-            quae, aliquam praesentium asperiores sequi! Nemo laborum
-            exercitationem reprehenderit impedit animi at repudiandae, sed
-            ducimus sunt labore sequi maxime officiis illum! Ex debitis error
-            tempora optio minima? Harum aliquam natus officiis non soluta hic
-            eos itaque ad atque ut, nesciunt officia vitae eius deleniti id odit
-            cum totam cumque mollitia autem! Nam repudiandae temporibus quas.
-            Culpa ducimus cupiditate, laborum temporibus possimus placeat harum
-            sunt ex dolorem quisquam suscipit eaque tenetur at ipsum nesciunt
-            animi molestiae impedit! Delectus et sapiente voluptates
-            dignissimos.
+            <h2 class="partners__title heading">Наші Партнери</h2>
+            <div class="partners__carousel carousel swiper">
+              <div class="carousel__wrapper swiper-wrapper">
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__image">
+                    <img src="img/partners/chebotaryov.png" alt="" />
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__image">
+                    <img src="img/partners/bogomolets1.png" alt="" />
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__image">
+                    <img src="img/partners/bogomolets2.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__nav-btn swiper-button-prev"></div>
+              <div class="carousel__nav-btn swiper-button-next"></div>
+            </div>
           </div>
         </section>
         <section id="team" class="main__team team">
@@ -807,6 +780,7 @@
         </svg>
       </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

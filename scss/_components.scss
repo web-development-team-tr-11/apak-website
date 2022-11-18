@@ -39,7 +39,7 @@
   text-align: center;
   font-size: 36px;
   line-height: ((57 / 36) * 100%);
-  font-weight: 700;
+  font-weight: 600;
   color: $secondaryColor;
 }
 
@@ -385,8 +385,31 @@
     min-height: 120px;
     resize: vertical;
   }
+
+  &__btn {
+    margin: 0 auto;
+  }
 }
 
-.item-important {
-  color: red;
+.carousel {
+  &__image {
+    text-align: center;
+    & img {
+      width: 220px;
+      height: 220px;
+
+      @include _768 {
+        width: 165px;
+        height: 165px;
+      }
+    }
+  }
+
+  &__nav-btn {
+    &::after {
+      color: $secondaryColor;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
 }
