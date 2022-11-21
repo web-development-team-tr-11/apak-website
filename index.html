@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>АПАК</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans:regular,italic,500,600,700,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
@@ -116,7 +118,7 @@
         <section id="about" class="main__about about">
           <div class="about__container container">
             <div class="about__aboutText aboutText">
-              <!-- <h3 class="aboutText__title title">
+              <h3 class="aboutText__title title">
                 Гіпоксичні тренування - це альтернативний шлях
                 безмедикаментозного способу підвищення резистентності організму.
               </h3>
@@ -129,7 +131,7 @@
                   небагато місця, існують системи контролю за станом пацієнта,
                   що робить ці тренування більш простими та безпечними.
                 </div>
-              </div> -->
+              </div>
             </div>
             <div class="about__image3D image3D">
               <img
@@ -257,7 +259,7 @@
                 зворотного дихання.
               </div>
             </div>
-            <h2 class="aparatus__title title">
+            <h2 class="aparatus__title heading">
               Переваги апарату в порівнянні з аналогами
             </h2>
 
@@ -701,7 +703,6 @@
                     id="name"
                     class="form-getintouch__input form-getintouch__input--important"
                     type="text"
-                    pattern="[A-Z,a-z]{2-20}"
                     placeholder="Ігор"
                   />
                 </div>
@@ -712,9 +713,8 @@
                   <input
                     id="phone"
                     class="form-getintouch__input form-getintouch__input--important"
-                    type="tel"
-                    pattern="[0-9]{12}"
-                    placeholder="380..."
+                    type="text"
+                    placeholder="+38(000)000-00-00"
                   />
                 </div>
                 <div class="form-getintouch__item">
@@ -780,7 +780,10 @@
         </svg>
       </a>
     </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
