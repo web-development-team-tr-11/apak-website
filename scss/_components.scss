@@ -25,6 +25,7 @@
           &:first-child {
             transform: rotate(-45deg);
           }
+
           &:last-child {
             transform: rotate(45deg);
           }
@@ -36,9 +37,9 @@
 
 .heading {
   text-align: center;
-  font-size: 40px;
-  line-height: ((57 / 40) * 100%);
-  font-weight: 700;
+  font-size: 36px;
+  line-height: ((57 / 36) * 100%);
+  font-weight: 600;
   color: $secondaryColor;
 }
 
@@ -155,6 +156,7 @@
 /* contacts */
 .contacts {
   font-weight: 500;
+
   &__item {
     color: $textColor;
     line-height: calc((24 / 16) * 100%);
@@ -288,10 +290,10 @@
   }
 }
 
-.method__methodLeft{
+.method__methodLeft {
   float: left;
   margin: 20px;
-  width: 1000px;
+  max-width: 1000px;
   position: relative;
   font-family: inherit;
   font-size: inherit;
@@ -312,7 +314,7 @@
   }
 }
 
-.method__methodRight{
+.method__methodRight {
   float: right;
   margin: 20px;
   width: 1000px;
@@ -333,6 +335,85 @@
     background: $secondaryColor;
     border: 4px solid $secondaryColor;
     color: #fff;
-  }}
+  }
+}
+
+.feedback {
+  width: 100%;
+}
+
 .form-getintouch {
+  font-family: inherit;
+
+  &__heading {
+    text-align: center;
+    font-size: 24px;
+    line-height: ((36 / 24) * 100%);
+    font-weight: 600;
+    color: $secondaryColor;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background: none;
+    padding: 5px 12px;
+    border: 2px solid $mainColor;
+    border-radius: 15px;
+
+    &.error {
+      border: 2px solid rgb(230, 0, 0);
+    }
+  }
+
+  &__textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}
+
+.carousel {
+  &__image {
+    text-align: center;
+    & img {
+      width: 220px;
+      height: 220px;
+
+      @include _768 {
+        width: 165px;
+        height: 165px;
+      }
+    }
+  }
+
+  &__nav-btn {
+    &::after {
+      color: $secondaryColor;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+}
+
+.item-important {
+  color: red;
 }

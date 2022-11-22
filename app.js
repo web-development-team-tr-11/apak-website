@@ -3,15 +3,13 @@ const social = document.querySelector(".social");
 const burger = document.querySelector(".burger__body");
 const options = document.querySelectorAll(".options__item");
 const header = document.querySelector("header");
-const scrollitem = document.querySelectorAll(".scroll-item");
+const scrollItem = document.querySelectorAll(".scroll-item");
 
 /*scrollAnimation*/
-
 const scrollAnimation = () => {
   let windowCenter = window.innerHeight / 2 + window.scrollY;
-
-  scrollitem.forEach((el) => {
-    let scrollOffset = el.offsetTop / 1.5 + el.offsetHeight / 2;
+  scrollItem.forEach((el) => {
+    let scrollOffset = el.offsetTop / 1.3 + el.offsetHeight / 2;
     if (windowCenter >= scrollOffset) {
       el.classList.add("animation-class");
     } else {
@@ -23,6 +21,8 @@ const scrollAnimation = () => {
 /* burger menu */
 burger.addEventListener("click", () => {
   menu.classList.toggle("active");
+  menu.style.zIndex = 10;
+  burger.style.zIndex = 20;
   burger.classList.toggle("active");
   document.body.classList.toggle("lock");
 });
@@ -51,13 +51,10 @@ window.addEventListener("scroll", () => {
 
 /* smooth page transition */
 const anchors = document.querySelectorAll("a[href*='#']");
-
 anchors.forEach((anchor) => {
   anchor.addEventListener("click", (event) => {
     event.preventDefault();
-
     const blockID = anchor.getAttribute("href").substring(1);
-
     document.getElementById(blockID).scrollIntoView({
       behavior: "smooth",
       block: "start",
