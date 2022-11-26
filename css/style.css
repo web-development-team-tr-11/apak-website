@@ -404,6 +404,41 @@ body {
   color: red;
 }
 
+.feedback-modal {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease;
+}
+.feedback-modal__content {
+  flex: 0 1 350px;
+  box-sizing: content-box;
+  position: relative;
+  max-width: 350px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.feedback-modal__close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #ed1e79;
+  cursor: pointer;
+}
+
 body {
   background: rgb(167, 250, 255);
   background: linear-gradient(50deg, rgb(167, 250, 255) 0%, rgb(198, 245, 255) 25%, rgb(252, 238, 255) 70%, rgb(254, 221, 255) 100%);
@@ -642,7 +677,7 @@ body.lock {
 }
 .getintouch__feedback {
   grid-area: feedback;
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
 }
 

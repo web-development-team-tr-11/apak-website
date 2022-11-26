@@ -38,7 +38,7 @@
 .heading {
   text-align: center;
   font-size: 36px;
-  line-height: ((57 / 36) * 100%);
+  line-height: (calc(57 / 36) * 100%);
   font-weight: 600;
   color: $secondaryColor;
 }
@@ -348,7 +348,7 @@
   &__heading {
     text-align: center;
     font-size: 24px;
-    line-height: ((36 / 24) * 100%);
+    line-height: (calc(36 / 24) * 100%);
     font-weight: 600;
     color: $secondaryColor;
     margin-bottom: 15px;
@@ -416,4 +416,41 @@
 
 .item-important {
   color: red;
+}
+
+.feedback-modal {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease;
+
+  &__content {
+    flex: 0 1 350px;
+    box-sizing: content-box;
+    position: relative;
+    max-width: 350px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: $secondaryColor;
+    cursor: pointer;
+  }
 }
