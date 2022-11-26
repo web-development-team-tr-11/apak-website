@@ -5,6 +5,7 @@ const validateModalForm = () => {
   const phone = document.querySelector("#phone-modal");
   const email = document.querySelector("#email-modal");
   const formInputs = document.querySelectorAll(".input-modal--important");
+  IMask(phone, maskOptions);
   submitForm(form, username, phone, email, formInputs);
 };
 
@@ -17,6 +18,7 @@ const validateForm = () => {
   const formInputs = document.querySelectorAll(
     ".form-getintouch__input--important"
   );
+  IMask(phone, maskOptions);
   submitForm(form, username, phone, email, formInputs);
 };
 
@@ -52,8 +54,6 @@ const checkInputs = (username, phone, email, formInputs) => {
       input.classList.remove("error");
     }
   });
-
-  IMask(phone, maskOptions);
 };
 
 //name validation
