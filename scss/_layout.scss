@@ -1202,6 +1202,12 @@ th:first-child {
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @include _992 {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__menu {
@@ -1222,11 +1228,8 @@ th:first-child {
   }
 
   &__social {
-    @include _768 {
-      flex: 0 1 50%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    @include min_992 {
+      margin-right: 80px;
     }
   }
 }
