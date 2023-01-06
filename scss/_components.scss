@@ -395,3 +395,50 @@
     cursor: pointer;
   }
 }
+
+/* team member card */
+.member-card {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  @include glassBackground("&", rgba(255, 255, 255, 0.1));
+
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    padding: 15px 0 7px;
+    text-align: center;
+  }
+
+  &__name {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+
+  &__role {
+    display: block;
+    line-height: 18px;
+    color: rgb(83, 83, 83);
+    margin-bottom: 12px;
+  }
+
+  &__social {
+    justify-content: center;
+  }
+}

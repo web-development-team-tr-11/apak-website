@@ -1100,6 +1100,23 @@ th:first-child {
   }
 }
 
+.team {
+  &__container {
+    padding: 80px 10px 50px 10px;
+  }
+
+  &__body {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__column {
+    flex: 0 1 25%;
+  }
+}
+
 .getintouch {
   &__container {
     padding: 80px 10px;
@@ -1108,7 +1125,8 @@ th:first-child {
     grid-template-areas:
       "title title"
       "contacts feedback";
-    gap: 30px;
+    row-gap: 50px;
+    column-gap: 30px;
 
     @include _992 {
       grid-template: repeat(2, minmax(min-content, max-content)) / 1fr;
