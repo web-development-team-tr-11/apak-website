@@ -39,10 +39,16 @@
 /* heading */
 .heading {
   text-align: center;
-  font-size: 36px;
-  line-height: (calc(57 / 36) * 100%);
-  font-weight: 600;
+  font-size: 42px;
+  line-height: (calc(57 / 42) * 100%);
+  letter-spacing: 0.5px;
+  font-weight: 700;
   color: $secondaryColor;
+  margin-bottom: 50px;
+
+  @include _768 {
+    margin-bottom: 40px;
+  }
 }
 
 /* button */
@@ -80,28 +86,28 @@
 /* additional features */
 .options {
   position: fixed;
-  bottom: 45px;
-  right: 45px;
+  bottom: 35px;
+  right: 35px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 
-  @include _768 {
-    bottom: 30px;
-    right: 30px;
+  @include _992 {
+    bottom: 25px;
+    right: 25px;
     gap: 20px;
   }
 
-  @include _480 {
-    bottom: 20px;
-    right: 20px;
+  @include _768 {
+    bottom: 15px;
+    right: 15px;
   }
 
   &__item {
     position: relative;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,8 +187,8 @@
   gap: 20px;
 
   &__item {
-    display: inline-block;
-    position: relative;
+    //display: inline-block;
+    //position: relative;
     transition: all 0.3s ease-in-out;
 
     &:hover {

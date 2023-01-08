@@ -109,6 +109,11 @@ body {
   }
 
   &__social {
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
     @include _992 {
       display: none;
     }
@@ -861,9 +866,6 @@ th:first-child {
 
 .tablecontainer__table tr:hover {
   box-shadow: 0 5px 15px rgba($color: $mainColor, $alpha: 1);
-  height: 45px;
-  line-height: 45px;
-  font-size: 1.11em;
 }
 
 .table__parameters-left {
@@ -1092,11 +1094,7 @@ th:first-child {
 
 .partners {
   &__carousel {
-    padding: 50px 0px;
-
-    @include _992 {
-      margin: 0px 25px;
-    }
+    margin: 0px 25px;
   }
 }
 
@@ -1106,7 +1104,7 @@ th:first-child {
   }
 
   &__body {
-    margin-top: 30px;
+    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1120,25 +1118,20 @@ th:first-child {
 .getintouch {
   &__container {
     padding: 80px 10px;
+  }
+
+  &__body {
     display: grid;
-    grid-template: repeat(2, minmax(min-content, max-content)) / repeat(2, 1fr);
-    grid-template-areas:
-      "title title"
-      "contacts feedback";
-    row-gap: 50px;
-    column-gap: 30px;
+    grid-template: minmax(min-content, max-content) / repeat(2, 1fr);
+    grid-template-areas: "contacts feedback";
+    gap: 30px;
 
     @include _992 {
       grid-template: repeat(2, minmax(min-content, max-content)) / 1fr;
       grid-template-areas:
-        "title"
         "contacts"
         "feedback";
     }
-  }
-
-  &__title {
-    grid-area: title;
   }
 
   &__items {
@@ -1243,9 +1236,24 @@ th:first-child {
         align-items: center;
       }
     }
+
+    &-link {
+      font-size: 18px;
+      line-height: 20px;
+
+      @include _768 {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
   }
 
   &__social {
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
     @include min_992 {
       margin-right: 80px;
     }
