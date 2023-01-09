@@ -1545,6 +1545,49 @@ th:first-child {
   }
 }
 
+.aparatus_articles {
+  margin-left: 0;
+  list-style: none;
+  counter-reset: li;
+  font-family: calibri;
+  color: white;
+}
+
+.aparatus_articles li {
+  padding: 10px 0;
+  position: relative;
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1em;
+  background: rgba(41, 171, 226, 0.7);
+}
+
+.aparatus_articles li:before {
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5em;
+  width: 1.875em;
+  text-align: center;
+  color: white;
+  padding: auto;
+  font-weight: bold;
+  font-size: x-large;
+  background: #ed1e79;
+  border-bottom-left-radius: 70em;
+  border-top-left-radius: 70em;
+  counter-increment: li;
+  content: counter(li);
+}
+
+.aparatus_articlesdiv {
+  width: 94%;
+  margin-left: 3%;
+  padding-right: 3%;
+  display: inline-block;
+}
+
 .partners__carousel {
   margin: 0px 25px;
 }
