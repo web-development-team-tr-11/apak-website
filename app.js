@@ -11,9 +11,9 @@ const scrollAnimation = () => {
   scrollItem.forEach((el) => {
     let scrollOffset = el.offsetTop / 1.3 + el.offsetHeight / 2;
     if (windowCenter >= scrollOffset) {
-      el.classList.add("animation-class");
+      el.classList.add("scroll-animation");
     } else {
-      el.classList.remove("animation-class");
+      el.classList.remove("scroll-animation");
     }
   });
 };

@@ -44,7 +44,7 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   color: $secondaryColor;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   @include _1100 {
     font-size: 32px;
@@ -52,7 +52,7 @@
   }
 
   @include _768 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   @include _568 {
