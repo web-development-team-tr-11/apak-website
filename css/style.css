@@ -794,25 +794,20 @@ body.lock {
 .aparatus__container {
   padding: 50px 10px;
 }
-
-.about-aparatus {
+.aparatus__container > *:not(:last-child) {
   margin-bottom: 100px;
 }
 @media (max-width: 1100px) {
-  .about-aparatus {
+  .aparatus__container > *:not(:last-child) {
     margin-bottom: 80px;
   }
 }
 @media (max-width: 768px) {
-  .about-aparatus {
+  .aparatus__container > *:not(:last-child) {
     margin-bottom: 60px;
   }
 }
-.about-aparatus__body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 .about-aparatus__text {
   align-self: center;
   font-size: 24px;
@@ -853,19 +848,6 @@ body.lock {
   }
 }
 
-.advantages {
-  margin-bottom: 100px;
-}
-@media (max-width: 1100px) {
-  .advantages {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 768px) {
-  .advantages {
-    margin-bottom: 60px;
-  }
-}
 @media (max-width: 1100px) {
   .advantages__body *:not(:last-child) {
     margin-bottom: 35px;
@@ -977,21 +959,10 @@ body.lock {
   }
 }
 
-.definition {
-  margin-bottom: 100px;
-}
-@media (max-width: 1100px) {
-  .definition {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 768px) {
-  .definition {
-    margin-bottom: 60px;
-  }
+.definition__body > *:not(:last-child) {
+  margin-bottom: 10px;
 }
 .definition__item {
-  margin-bottom: 10px;
   padding: 15px;
   font-size: 20px;
   text-align: center;
@@ -1014,19 +985,6 @@ body.lock {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.where-to-use {
-  margin-bottom: 100px;
-}
-@media (max-width: 1100px) {
-  .where-to-use {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 768px) {
-  .where-to-use {
-    margin-bottom: 60px;
-  }
-}
 .where-to-use__body *:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -1079,23 +1037,6 @@ body.lock {
   .where-to-use__item:nth-child(2n):hover {
     border-right-width: 15px;
   }
-}
-
-.characteristics {
-  margin-bottom: 100px;
-}
-@media (max-width: 1100px) {
-  .characteristics {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 768px) {
-  .characteristics {
-    margin-bottom: 60px;
-  }
-}
-.characteristics__body *:not(:last-child) {
-  margin-bottom: 10px;
 }
 
 .table {
@@ -1161,6 +1102,62 @@ body.lock {
 @media (max-width: 768px) {
   .dimensions__heading-list {
     margin-top: 5px;
+  }
+}
+
+.science__publications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 18px;
+  line-height: 20px;
+  color: white;
+  counter-reset: li;
+}
+.science__publications > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  .science__publications {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.science__publication {
+  width: calc(100% - 50px);
+  padding: 15px;
+  position: relative;
+  background-color: #29abe2;
+}
+@media (max-width: 768px) {
+  .science__publication {
+    width: calc(100% - 40px);
+  }
+}
+.science__publication::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50px;
+  width: 50px;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #ed1e79;
+  border-radius: 50px 0 0 50px;
+  counter-increment: li;
+  content: counter(li);
+}
+@media (max-width: 768px) {
+  .science__publication::before {
+    left: -40px;
+    width: 40px;
+    font-size: 22px;
+    line-height: 24px;
   }
 }
 
@@ -1538,49 +1535,6 @@ body.lock {
   .aparatus_paragraph {
     margin-left: 35px;
   }
-}
-
-.aparatus_articles {
-  margin-left: 0;
-  list-style: none;
-  counter-reset: li;
-  font-family: calibri;
-  color: white;
-}
-
-.aparatus_articles li {
-  padding: 10px 0;
-  position: relative;
-  left: 1.5em;
-  margin-bottom: 0.75em;
-  padding-left: 1em;
-  background: rgba(41, 171, 226, 0.7);
-}
-
-.aparatus_articles li:before {
-  padding: 10px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -1.5em;
-  width: 1.875em;
-  text-align: center;
-  color: white;
-  padding: auto;
-  font-weight: bold;
-  font-size: x-large;
-  background: #ed1e79;
-  border-bottom-left-radius: 70em;
-  border-top-left-radius: 70em;
-  counter-increment: li;
-  content: counter(li);
-}
-
-.aparatus_articlesdiv {
-  width: 94%;
-  margin-left: 3%;
-  padding-right: 3%;
-  display: inline-block;
 }
 
 .partners__carousel {

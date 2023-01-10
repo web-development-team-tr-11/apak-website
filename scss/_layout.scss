@@ -349,26 +349,22 @@ body {
 .aparatus {
   &__container {
     padding: 50px 10px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 100px;
+
+      @include _1100 {
+        margin-bottom: 80px;
+      }
+
+      @include _768 {
+        margin-bottom: 60px;
+      }
+    }
   }
 }
 
 .about-aparatus {
-  margin-bottom: 100px;
-
-  @include _1100 {
-    margin-bottom: 80px;
-  }
-
-  @include _768 {
-    margin-bottom: 60px;
-  }
-
-  &__body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   &__text {
     align-self: center;
     font-size: 24px;
@@ -409,16 +405,6 @@ body {
 }
 
 .advantages {
-  margin-bottom: 100px;
-
-  @include _1100 {
-    margin-bottom: 80px;
-  }
-
-  @include _768 {
-    margin-bottom: 60px;
-  }
-
   &__body {
     *:not(:last-child) {
       @include _1100 {
@@ -543,18 +529,13 @@ body {
 }
 
 .definition {
-  margin-bottom: 100px;
-
-  @include _1100 {
-    margin-bottom: 80px;
-  }
-
-  @include _768 {
-    margin-bottom: 60px;
+  &__body {
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
-    margin-bottom: 10px;
     padding: 15px;
     font-size: 20px;
     text-align: center;
@@ -579,16 +560,6 @@ body {
 }
 
 .where-to-use {
-  margin-bottom: 100px;
-
-  @include _1100 {
-    margin-bottom: 80px;
-  }
-
-  @include _768 {
-    margin-bottom: 60px;
-  }
-
   &__body {
     *:not(:last-child) {
       margin-bottom: 10px;
@@ -641,24 +612,6 @@ body {
           border-right-width: 15px;
         }
       }
-    }
-  }
-}
-
-.characteristics {
-  margin-bottom: 100px;
-
-  @include _1100 {
-    margin-bottom: 80px;
-  }
-
-  @include _768 {
-    margin-bottom: 60px;
-  }
-
-  &__body {
-    *:not(:last-child) {
-      margin-bottom: 10px;
     }
   }
 }
@@ -730,6 +683,64 @@ body {
 
       @include _768 {
         margin-top: 5px;
+      }
+    }
+  }
+}
+
+.science {
+  &__publications {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+    counter-reset: li;
+
+    & > *:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    @include _768 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__publication {
+    width: calc(100% - 50px);
+    padding: 15px;
+    position: relative;
+    background-color: $mainColor;
+
+    @include _768 {
+      width: calc(100% - 40px);
+    }
+
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50px;
+      width: 50px;
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 500;
+      text-align: center;
+      background-color: $secondaryColor;
+      border-radius: 50px 0 0 50px;
+      counter-increment: li;
+      content: counter(li);
+
+      @include _768 {
+        left: -40px;
+        width: 40px;
+        font-size: 22px;
+        line-height: 24px;
       }
     }
   }
@@ -1099,49 +1110,6 @@ body {
   @include _1100 {
     margin-left: 35px;
   }
-}
-
-.aparatus_articles {
-  margin-left: 0;
-  list-style: none;
-  counter-reset: li;
-  font-family: calibri;
-  color: white;
-}
-
-.aparatus_articles li {
-  padding: 10px 0;
-  position: relative;
-  left: 1.5em;
-  margin-bottom: 0.75em;
-  padding-left: 1em;
-  background: rgba($color: $mainColor, $alpha: 0.7);
-}
-
-.aparatus_articles li:before {
-  padding: 10px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -1.5em;
-  width: 1.875em;
-  text-align: center;
-  color: white;
-  padding: auto;
-  font-weight: bold;
-  font-size: x-large;
-  background: rgba($color: $secondaryColor, $alpha: 1);
-  border-bottom-left-radius: 70em;
-  border-top-left-radius: 70em;
-  counter-increment: li;
-  content: counter(li);
-}
-
-.aparatus_articlesdiv {
-  width: 94%;
-  margin-left: 3%;
-  padding-right: 3%;
-  display: inline-block;
 }
 
 .partners {
