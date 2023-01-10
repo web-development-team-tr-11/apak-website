@@ -1110,10 +1110,10 @@ body.lock {
     line-height: 20px;
   }
 }
-.table__row {
+.table__body .table__row {
   transition: all 0.3s;
 }
-.table__row:hover {
+.table__body .table__row:hover {
   box-shadow: 0 0 12px #29abe2;
 }
 .table__cell {

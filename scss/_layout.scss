@@ -674,11 +674,13 @@ body {
     line-height: 20px;
   }
 
-  &__row {
-    transition: all 0.3s;
+  &__body {
+    .table__row {
+      transition: all 0.3s;
 
-    &:hover {
-      box-shadow: 0 0 12px $mainColor;
+      &:hover {
+        box-shadow: 0 0 12px $mainColor;
+      }
     }
   }
 
