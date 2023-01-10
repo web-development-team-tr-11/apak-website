@@ -365,6 +365,12 @@ body {
 }
 
 .about-aparatus {
+  .about-aparatus__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__text {
     align-self: center;
     font-size: 24px;

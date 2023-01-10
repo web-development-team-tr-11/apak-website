@@ -808,6 +808,11 @@ body.lock {
   }
 }
 
+.about-aparatus .about-aparatus__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .about-aparatus__text {
   align-self: center;
   font-size: 24px;
