@@ -415,9 +415,8 @@
 /* team member card */
 .member-card {
   position: relative;
-  margin: 20px;
+  width: 100%;
   padding: 20px;
-  width: 250px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 
@@ -426,6 +425,7 @@
   &__image {
     border-radius: 50%;
     overflow: hidden;
+
     img {
       display: block;
       width: 100%;
@@ -456,5 +456,61 @@
 
   &__social {
     justify-content: center;
+  }
+}
+
+/* dimensions cell in the characteristics table */
+.dimensions {
+  &__heading {
+    &-list {
+      list-style: square;
+      padding-left: 20px;
+      margin-top: 10px;
+
+      @include _768 {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+/* patent information block */
+.item-patents {
+  padding: 15px;
+  border-radius: 20px;
+  background-color: $mainColor;
+  color: #fafafa;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  & > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: $secondaryColor;
+    transform: scale(1.03);
+  }
+
+  &__heading {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+
+    @include _768 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: justify;
+
+    @include _768 {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 }
