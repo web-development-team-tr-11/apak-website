@@ -9,7 +9,7 @@ const scrollItem = document.querySelectorAll(".scroll-item");
 const scrollAnimation = () => {
   let windowCenter = window.innerHeight / 2 + window.scrollY;
   scrollItem.forEach((el) => {
-    let scrollOffset = el.offsetTop / 1.3 + el.offsetHeight / 2;
+    let scrollOffset = el.offsetTop / 1.15 + el.offsetHeight / 2;
     if (windowCenter >= scrollOffset) {
       el.classList.add("scroll-animation");
     } else {
