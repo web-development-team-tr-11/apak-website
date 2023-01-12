@@ -4,6 +4,7 @@ body {
   background-color: ghostwhite;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
   line-height: 1;
 }
@@ -50,6 +51,12 @@ $secondaryColor: #ed1e79;
 
 @mixin _1100 {
   @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin min_1100 {
+  @media (min-width: 1100px) {
     @content;
   }
 }
