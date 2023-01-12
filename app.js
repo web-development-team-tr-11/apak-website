@@ -6,6 +6,7 @@ const header = document.querySelector("header");
 const scrollItem = document.querySelectorAll(".scroll-item");
 const searchInputs = document.querySelectorAll(".search__input");
 const searchBtns = document.querySelectorAll(".search__btn");
+const clearBtns = document.querySelectorAll(".clear-btn");
 const firstSearchBlock = document.querySelector(".search");
 
 /*scrollAnimation*/
@@ -69,9 +70,11 @@ anchors.forEach((anchor) => {
 if (window.getComputedStyle(firstSearchBlock).display === "none") {
   activeInput = searchInputs[1];
   activeSearchBtn = searchBtns[1];
+  activeClearBtn = clearBtns[1];
 } else {
   activeInput = searchInputs[0];
   activeSearchBtn = searchBtns[0];
+  activeClearBtn = clearBtns[0];
 }
 
 activeSearchBtn.addEventListener("click", () => {
@@ -92,18 +95,26 @@ activeSearchBtn.addEventListener("click", () => {
         elem.innerHTML = elem.innerText;
       }
     });
-    activeInput.value = "";
   } else {
-    textItems.forEach((elem) => {
+    document.querySelectorAll(".highlighted").forEach((elem) => {
       elem.innerHTML = elem.innerText;
+      elem.classList.remove("highlighted");
     });
   }
 });
 
-const getHighlightedText = (text, higlight) => {
-  let groups = higlight
+const getHighlightedText = (text, highlight) => {
+  let groups = highlight
     .split(" ")
     .map((v) => `(${v})`)
     .join("|");
   return text.replace(new RegExp(groups, "gi"), (g) => `<mark>${g}</mark>`);
 };
+
+activeClearBtn.addEventListener("click", () => {
+  activeInput.value = "";
+  document.querySelectorAll(".highlighted").forEach((elem) => {
+    elem.classList.remove("highlighted");
+    elem.innerHTML = elem.innerText;
+  });
+});
