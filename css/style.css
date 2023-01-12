@@ -1422,6 +1422,11 @@ body.lock {
     gap: 30px;
   }
 }
+@media (max-width: 568px) {
+  .patents__items {
+    gap: 20px;
+  }
+}
 .patents__images {
   display: flex;
   flex-direction: column;

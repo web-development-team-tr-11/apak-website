@@ -948,6 +948,10 @@ body {
     @include _1100 {
       gap: 30px;
     }
+
+    @include _568 {
+      gap: 20px;
+    }
   }
 
   &__images {

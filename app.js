@@ -4,6 +4,9 @@ const burger = document.querySelector(".burger__body");
 const options = document.querySelectorAll(".options__item");
 const header = document.querySelector("header");
 const scrollItem = document.querySelectorAll(".scroll-item");
+const searchInputs = document.querySelectorAll(".search__input");
+const searchBtns = document.querySelectorAll(".search__btn");
+const firstSearchBlock = document.querySelector(".search");
 
 /*scrollAnimation*/
 const scrollAnimation = () => {
@@ -61,3 +64,46 @@ anchors.forEach((anchor) => {
     });
   });
 });
+
+/* text search on the website */
+if (window.getComputedStyle(firstSearchBlock).display === "none") {
+  activeInput = searchInputs[1];
+  activeSearchBtn = searchBtns[1];
+} else {
+  activeInput = searchInputs[0];
+  activeSearchBtn = searchBtns[0];
+}
+
+activeSearchBtn.addEventListener("click", () => {
+  let inputValue = activeInput.value.trim().toLowerCase();
+  let textItems = document.querySelectorAll(".text");
+  if (inputValue !== "") {
+    textItems.forEach((elem) => {
+      if (elem.innerText.toLowerCase().search(inputValue) !== -1) {
+        let str = elem.innerText;
+        elem.innerHTML = getHighlightedText(str, inputValue);
+        elem.classList.add("highlighted");
+        document.querySelector(".highlighted").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        elem.classList.remove("highlighted");
+        elem.innerHTML = elem.innerText;
+      }
+    });
+    activeInput.value = "";
+  } else {
+    textItems.forEach((elem) => {
+      elem.innerHTML = elem.innerText;
+    });
+  }
+});
+
+const getHighlightedText = (text, higlight) => {
+  let groups = higlight
+    .split(" ")
+    .map((v) => `(${v})`)
+    .join("|");
+  return text.replace(new RegExp(groups, "gi"), (g) => `<mark>${g}</mark>`);
+};
