@@ -307,7 +307,7 @@
   border: none;
   outline: none;
   background: none;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 20px;
@@ -360,7 +360,7 @@
     border-radius: 15px;
 
     &.error {
-      border: 2px solid rgb(230, 0, 0);
+      border: 2px solid $secondaryColor;
     }
   }
 

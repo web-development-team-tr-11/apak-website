@@ -77,6 +77,14 @@ if (window.getComputedStyle(firstSearchBlock).display === "none") {
   activeClearBtn = clearBtns[0];
 }
 
+activeInput.addEventListener("input", () => {
+  if (activeInput.value === "") {
+    activeClearBtn.style.display = "none";
+  } else {
+    activeClearBtn.style.display = "flex";
+  }
+});
+
 activeSearchBtn.addEventListener("click", () => {
   let inputValue = activeInput.value.trim().toLowerCase();
   let textItems = document.querySelectorAll(".text");
@@ -117,4 +125,5 @@ activeClearBtn.addEventListener("click", () => {
     elem.classList.remove("highlighted");
     elem.innerHTML = elem.innerText;
   });
+  activeClearBtn.style.display = "none";
 });

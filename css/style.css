@@ -305,7 +305,7 @@ body {
   border: none;
   outline: none;
   background: none;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 20px;
@@ -354,7 +354,7 @@ body {
   border-radius: 15px;
 }
 .form-getintouch__input.error {
-  border: 2px solid rgb(230, 0, 0);
+  border: 2px solid #ed1e79;
 }
 .form-getintouch__textarea {
   min-height: 120px;
