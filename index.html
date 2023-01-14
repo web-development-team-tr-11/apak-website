@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="header__functions">
-              <button class="header__contact-btn btn" type="button">
+              <button class="header__contact-btn contact-btn btn" type="button">
                 Зворотній зв'язок
               </button>
               <div class="header__top-search search">
@@ -54,6 +54,7 @@
                   type="text"
                   placeholder="Пошук по сайту"
                 />
+                <button class="clear-btn" type="button">&times;</button>
                 <button class="search__btn" type="button">
                   <img src="img/search.svg" alt="search" />
                 </button>
@@ -65,21 +66,31 @@
               <img src="img/logo.png" alt="logo" />
             </a>
             <nav class="header__menu menu">
-              <ul class="menu__list">
+              <ul class="header__menu-list menu__list">
                 <li class="menu__item">
-                  <a href="#method" class="menu__link">Про метод</a>
+                  <a href="#method" class="header__menu-link menu__link"
+                    >Про метод</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a href="#aparatus" class="menu__link">Про прилад</a>
+                  <a href="#aparatus" class="header__menu-link menu__link"
+                    >Про прилад</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a href="#partners" class="menu__link">Партнери</a>
+                  <a href="#partners" class="header__menu-link menu__link"
+                    >Партнери</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a href="#team" class="menu__link">Команда</a>
+                  <a href="#team" class="header__menu-link menu__link"
+                    >Команда</a
+                  >
                 </li>
                 <li class="menu__item">
-                  <a href="#getintouch" class="menu__link">Контакти</a>
+                  <a href="#getintouch" class="header__menu-link menu__link"
+                    >Контакти</a
+                  >
                 </li>
               </ul>
               <div class="menu__social social">
@@ -100,6 +111,7 @@
                 type="text"
                 placeholder="Пошук по сайту"
               />
+              <button class="clear-btn" type="button">&times;</button>
               <button class="search__btn" type="button">
                 <img src="img/search.svg" alt="search" />
               </button>
@@ -117,13 +129,14 @@
       <main class="main">
         <section id="about" class="main__about about">
           <div class="about__container container">
-            <div class="about__aboutText aboutText">
-              <h3 class="aboutText__title title">
-                Гіпоксичні тренування - це альтернативний шлях
-                безмедикаментозного способу підвищення резистентності організму.
-              </h3>
-              <div class="aboutText__container container">
-                <div class="aboutText__info info">
+            <div class="about__main-block main-block">
+              <div class="main-block__text">
+                <h2 class="main-block__title text">
+                  Гіпоксичні тренування - це альтернативний шлях
+                  безмедикаментозного способу підвищення резистентності
+                  організму.
+                </h2>
+                <div class="main-block__info text">
                   Відомо три способи проведення гіпоксичних тренувань:
                   тренування в горах, гіпобарична гіпоксія та нормобарична
                   гіпоксія. Серед них інтервальні нормобаричні гіпоксичні
@@ -132,21 +145,17 @@
                   що робить ці тренування більш простими та безпечними.
                 </div>
               </div>
-            </div>
-            <div class="about__image3D image3D">
-              <img
-                src="img/about/main.png"
-                alt="Main 3D"
-                class="image3D__image image"
-              />
+              <div class="main-block__image">
+                <img src="img/about/main.png" alt="Main" />
+              </div>
             </div>
           </div>
         </section>
         <section id="method" class="main__method method">
           <div class="method__container container">
-            <div class="method__block block">
-              <div class="method__methodRight methodRight">
-                <div class="method__methodTextRight methodTextRight">
+            <div class="method__items">
+              <div class="method__item">
+                <div class="method__text text">
                   Суть методу інтервальної гіпокситерапії – циклічне зниження
                   рівня кисню в крові до індивідуального адаптаційного рівня з
                   подальшим поверненням до вихідних значень. Пацієнт вдихає
@@ -154,35 +163,23 @@
                   атмосферному тиску у переривчастому режимі (чергування
                   періодів дозованої гіпоксії (10-14%) та нормоксії (21%)).
                 </div>
+                <div class="method__image">
+                  <img src="img/method/heartSignal.svg" alt="Heart Signal" />
+                </div>
               </div>
-              <div class="about__image3D image3D">
-                <img
-                  src="img/method/heartSignal.svg"
-                  alt="heartSignal"
-                  class="methodImageLeft__image image"
-                />
-              </div>
-            </div>
-            <div class="method__block block">
-              <div class="method__methodLeft methodLeft">
-                <div class="method__methodTextLeft methodTextLeft">
+              <div class="method__item">
+                <div class="method__text text">
                   10-14% - Концентрація кисню на висоті 4000-5000 м над рівнем
                   моря. Таким чином, інтервальна гіпокситерапія - імітація
                   підйому в гору з наступним швидким спуском (1 процедура - 6-10
                   підйомів, тривалість процедури 30-60 хв).
                 </div>
+                <div class="method__image">
+                  <img src="img/method/mountain.svg" alt="Mountain" />
+                </div>
               </div>
-              <div class="about__image3D image3D">
-                <img
-                  src="img/method/mountain.svg"
-                  alt="mountain"
-                  class="methodImageRight__image image"
-                />
-              </div>
-            </div>
-            <div class="method__block block">
-              <div class="method__methodRight methodRight">
-                <div class="method__methodTextRight methodTextRight">
+              <div class="method__item">
+                <div class="method__text text">
                   Метод гіпокситерапії використовує унікальний генетично
                   зумовлений феномен людського організму, який полягає в тому,
                   що у відповідь на зниження надходження кисню до тканин
@@ -191,18 +188,12 @@
                   відбувається надвідновлення і з кожною подальшою дією цього
                   фактора стійкість організму збільшується.
                 </div>
+                <div class="method__image">
+                  <img src="img/method/dna.svg" alt="DNA" />
+                </div>
               </div>
-              <div class="about__image3D image3D">
-                <img
-                  src="img/method/dna.svg"
-                  alt="dna"
-                  class="methodImageLeft__image image"
-                />
-              </div>
-            </div>
-            <div class="method__block block">
-              <div class="method__methodLeft methodLeft">
-                <div class="method__methodTextLeft methodTextLeft">
+              <div class="method__item">
+                <div class="method__text text">
                   За допомогою гіпокситерапії відбувається корекція процесів
                   транспорту кисню та посилення потужності окисних систем,
                   оскільки домінуючою системою, що сприймає адаптаційний вплив,
@@ -210,391 +201,538 @@
                   серцево-судинну систему, кров, багаторівневі регуляторні
                   системи та системи клітинного дихання всіх органів та систем.
                 </div>
+                <div class="method__image">
+                  <img src="img/method/growUp.svg" alt="Grow Up Arrow" />
+                </div>
               </div>
-              <div class="about__image3D image3D">
-                <img
-                  src="img/method/growUp.svg"
-                  alt="growUp"
-                  class="methodImageRight__image image"
-                />
-              </div>
-            </div>
-            <div class="method__block block">
-              <div class="method__methodRight methodRight">
-                <div class="method__methodTextRight methodTextRight">
+              <div class="method__item">
+                <div class="method__text text">
                   Крім специфічної адаптації до гіпоксії, розвивається і
                   неспецифічна адаптація – організм в цілому стає більш стійким
                   до несприятливих факторів навколишнього середовища (стресів,
                   інфекцій, фізичних та розумових навантажень, метеорологічним
                   умовам тощо).
                 </div>
-              </div>
-              <div class="about__image3D image3D">
-                <img
-                  src="img/method/immunity.svg"
-                  alt="immunity"
-                  class="methodImageLeft__image image"
-                />
+                <div class="method__image">
+                  <img src="img/method/immunity.svg" alt="Immunity" />
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section id="aparatus" class="main__aparatus aparatus">
           <div class="aparatus__container container">
-            <h2 class="aparatus__title title">
-              АВТОМАТИЗОВАНИЙ ПРОГРАМНО-АПАРАТНИЙ КОМПЛЕКС «ГІПОТРОН-М»
-            </h2>
-
             <div class="aparatus__about about-aparatus">
-              <div>
-                <img
-                  src="img/aparatus/aparatus.png"
-                  alt="Aparatus"
-                  class="about-aparatus__image"
-                />
-              </div>
-              <div class="about-aparatus__infoAparatus infoAparatus">
-                ГІПОТРОН-М - унікальна установка, основана на індивідуальній
-                регуляції дозованої нормобаричної гіпоксії, створеної методом
-                зворотного дихання.
+              <h2 class="about-aparatus__heading heading text">
+                АВТОМАТИЗОВАНИЙ ПРОГРАМНО-АПАРАТНИЙ КОМПЛЕКС «ГІПОТРОН-М»
+              </h2>
+              <div class="about-aparatus__body">
+                <div class="about-aparatus__image">
+                  <img src="img/aparatus/aparatus.png" alt="aparatus" />
+                </div>
+                <p class="about-aparatus__text text">
+                  ГІПОТРОН-М - унікальна установка, основана на індивідуальній
+                  регуляції дозованої нормобаричної гіпоксії, створеної методом
+                  зворотного дихання.
+                </p>
               </div>
             </div>
-            <h2 class="aparatus__title heading">
-              Переваги апарату в порівнянні з аналогами
-            </h2>
-
             <div class="aparatus__advantages advantages">
-              <div class="advantage__item">
-                Iндивідуальне налаштування на кожен сеанс роботи з пацієнтом
-              </div>
-              <div class="advantage__item">
-                Плавний діапазон налаштувань концентрації кисню у газовій суміші
-                дає можливість здійснювати її оптимальну регуляцію
-              </div>
-              <div class="advantage__item">
-                Проведення попереднього тестування пацієнта перед кожним курсом
-                лікування, що визначає граничний поріг індивідуального сприяння
-                хворого на різні дози концентрації кисню в повітряній суміш
-              </div>
-              <div class="advantage__item">
-                Автоматичний моніторинг стану здоров’я пацієнта під час сеансів
-              </div>
-              <div class="advantage__item">
-                Висока ступінь надійності дозволяє ефективно використовувати
-                апарат в медичній практиці
+              <h2 class="advantages__heading heading text">
+                Переваги апарату в порівнянні з аналогами:
+              </h2>
+              <div class="advantages__body">
+                <div class="advantages__item text">
+                  Iндивідуальне налаштування на кожен сеанс роботи з пацієнтом
+                </div>
+                <div class="advantages__item text">
+                  Плавний діапазон налаштувань концентрації кисню у газовій
+                  суміші дає можливість здійснювати її оптимальну регуляцію
+                </div>
+                <div class="advantages__item text">
+                  Проведення попереднього тестування пацієнта перед кожним
+                  курсом лікування, що визначає граничний поріг індивідуального
+                  сприяння хворого на різні дози концентрації кисню в повітряній
+                  суміш
+                </div>
+                <div class="advantages__item text">
+                  Автоматичний моніторинг стану здоров’я пацієнта під час
+                  сеансів
+                </div>
+                <div class="advantages__item text">
+                  Висока ступінь надійності дозволяє ефективно використовувати
+                  апарат в медичній практиці
+                </div>
               </div>
             </div>
-
-            <h2 class="aparatus__title title">Призначення комплексу</h2>
-
             <div class="aparatus__definition definition">
-              <div class="definition__item scroll-item">
-                Тестування на визначення індивідуального рівня стійкості до
-                гіпоксії пацієнтів та спортсменів
-              </div>
-              <div class="definition__item scroll-item">
-                Проведення сеансів гіпоксичних тренувань в автоматичному і
-                ручному режимах
-              </div>
-              <div class="definition__item scroll-item">
-                Ведення статистики проведених сеансів гіпоксичної терапії з
-                можливістю візуалізації даних на монітор персонального
-                комп'ютера та експорту інформації для подальшого аналізу
+              <h2 class="aparatus__heading heading text">
+                Основні призначення комплексу
+              </h2>
+              <div class="definition__body">
+                <div class="definition__item scroll-item text">
+                  Тестування на визначення індивідуального рівня стійкості до
+                  гіпоксії пацієнтів та спортсменів
+                </div>
+                <div class="definition__item scroll-item text">
+                  Проведення сеансів гіпоксичних тренувань в автоматичному і
+                  ручному режимах
+                </div>
+                <div class="definition__item scroll-item text">
+                  Ведення статистики проведених сеансів гіпоксичної терапії з
+                  можливістю візуалізації даних на монітор персонального
+                  комп'ютера та експорту інформації для подальшого аналізу
+                </div>
               </div>
             </div>
-
-            <h2 class="aparatus__title title">
-              Призначений для використання у
-            </h2>
-
-            <ul class="aparatus__where-to-use where-to-use">
-              <li>Медичних центрах</li>
-              <li>Поліклініках і лікарнях</li>
-              <li>Санаторіях, центрах оздоровлення та відпочинку</li>
-              <li>Вищих, шкільних та дошкільних навчальних закладах</li>
-              <li>Cпортивних секціях і школах</li>
-              <li>Cанітарних частинах армій</li>
-            </ul>
-            <div class="aparatus__table-container table-container">
-              <table class="tablecontainer__table table">
-                <tr>
-                  <th class="bold" colspan="2">Технічні характеристики:</th>
-                </tr>
-                <tr>
-                  <td>
-                    Кількість одночасного обслуговування пацієнтів / спортсменів
-                  </td>
-                  <td class="table__rightside rightside">1</td>
-                </tr>
-                <tr>
-                  <td>Моніторинг параметрів</td>
-                  <td class="table__rightside rightside">
-                    пульс, SpO<sub>2</sub>, ЧД, ОД, ХОД, <br />O<sub>2</sub>,
-                    CO<sub>2</sub>, ФПГ
-                  </td>
-                </tr>
-                <tr>
-                  <td>Діапазон вимірювання SpO<sub>2</sub></td>
-                  <td class="table__rightside rightside">0-100%</td>
-                </tr>
-                <tr>
-                  <td>Точність вимірювання SpO<sub>2</sub></td>
-                  <td class="table__rightside rightside">70-100% ± 2%</td>
-                </tr>
-                <tr>
-                  <td>Діапазон і точність вимірювання пульсу</td>
-                  <td class="table__rightside rightside">30-250 ± 2%</td>
-                </tr>
-                <tr>
-                  <td>
-                    Діапазон і точність вимірювання концентрації вуглекислого
-                    газу в газовому середовищі
-                  </td>
-                  <td class="table__rightside rightside">0,04-1% ± 3%</td>
-                </tr>
-                <tr>
-                  <td>Діапазон вимірювань об'єму дихання (ОД)</td>
-                  <td class="table__rightside rightside">0,25-6 л ± 5%</td>
-                </tr>
-                <tr>
-                  <td>
-                    Діапазон вимірювань концентрації кисню в газовому середовищі
-                  </td>
-                  <td class="table__rightside rightside">8-21% ± 5%</td>
-                </tr>
-                <tr>
-                  <td>
-                    Діапазон завдання концентрації кисню в газовому середовищі
-                  </td>
-                  <td class="table__rightside rightside">8-17,5% ± 10%</td>
-                </tr>
-                <tr>
-                  <td>Діапазон вимірювань частоти дихання (ЧД)</td>
-                  <td class="table__rightside rightside">5-30 хв.-1 ± 3%</td>
-                </tr>
-                <tr>
-                  <td>
-                    Діапазон вимірювання часу проведення сеансу гіпоксичного
-                    впливу
-                  </td>
-                  <td class="table__rightside rightside">1-99 хв.</td>
-                </tr>
-                <tr>
-                  <td>Тривалість сеансу «Діагностика»</td>
-                  <td class="table__rightside rightside">≈10 хв.</td>
-                </tr>
-                <tr>
-                  <td>Тривалість сеансу «Лікування»</td>
-                  <td class="table__rightside rightside">40-60 хв.</td>
-                </tr>
-                <tr>
-                  <td>Номінальна напруга живлення</td>
-                  <td class="table__rightside rightside">110-240 В</td>
-                </tr>
-                <tr>
-                  <td>Частота зміни однофазного струму</td>
-                  <td class="table__rightside rightside">50-60 Гц</td>
-                </tr>
-                <tr>
-                  <td>Повна потужність, споживана апаратом</td>
-                  <td class="table__rightside rightside">до 25 Вт</td>
-                </tr>
-                <tr>
-                  <td>
-                    <div>
-                      <div class="table__parameters_one parameters-one">
-                        Маса комплекту:
-                      </div>
-                      <div class="table__parameters_two parameters-two">
-                        блок автоматики і контур дихання
-                      </div>
-                    </div>
-                  </td>
-                  <td class="table__rightside rightside">2,2 кг</td>
-                </tr>
-                <tr>
-                  <td>
-                    <div>
-                      <div class="table__parameters-left parameters-left">
-                        Габаритні розміри:
-                      </div>
-                      <div class="table__parameters-right parameters-right">
-                        ▪ блок автоматики;<br />
-                        ▪ контур дихання.
-                      </div>
-                    </div>
-                  </td>
-                  <td class="table__rightside rightside">
-                    150х080х033 мм <br />225х200х130 мм
-                  </td>
-                </tr>
-                <tr>
-                  <td>Передача і збереження даних</td>
-                  <td class="table__rightside rightside">USB-порт</td>
-                </tr>
-                <tr>
-                  <td>Рівень шуму, утвореного апаратом</td>
-                  <td class="table__rightside rightside">до 60 дБ</td>
-                </tr>
-                <tr>
-                  <td>Тривожні сигнали</td>
-                  <td class="table__rightside rightside">
-                    пульс, SpO<sub>2</sub>, ЧД, O<sub>2</sub>, CO<sub>2</sub>,
-                    <br />аритмія
-                  </td>
-                </tr>
+            <div class="aparatus__where-to-use where-to-use">
+              <h2 class="where-to-use__heading heading text">
+                Призначений для використання у:
+              </h2>
+              <ul class="where-to-use__body">
+                <li class="where-to-use__item text">Медичних центрах</li>
+                <li class="where-to-use__item text">Поліклініках і лікарнях</li>
+                <li class="where-to-use__item text">
+                  Санаторіях, центрах оздоровлення та відпочинку
+                </li>
+                <li class="where-to-use__item text">
+                  Вищих, шкільних та дошкільних навчальних закладах
+                </li>
+                <li class="where-to-use__item text">
+                  Cпортивних секціях і школах
+                </li>
+                <li class="where-to-use__item text">
+                  Cанітарних частинах армій
+                </li>
+              </ul>
+            </div>
+            <div class="aparatus__characteristics characteristics">
+              <table class="characteristics__table table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <th
+                      class="table__cell table__heading table__main-heading text"
+                      colspan="2"
+                      scope="col"
+                    >
+                      Технічні характеристики:
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Кількість одночасного обслуговування пацієнтів /
+                      спортсменів
+                    </th>
+                    <td class="table__cell text">1</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Моніторинг параметрів
+                    </th>
+                    <td class="table__cell text">
+                      пульс, SpO<sub>2</sub>, ЧД, ОД, ХОД, O<sub>2</sub>,
+                      CO<sub>2</sub>, ФПГ
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон вимірювання SpO<sub>2</sub>
+                    </th>
+                    <td class="table__cell text">0-100&percnt;</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Точність вимірювання SpO<sub>2</sub>
+                    </th>
+                    <td class="table__cell text">
+                      70-100&percnt; &plusmn; 2&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон і точність вимірювання пульсу
+                    </th>
+                    <td class="table__cell text">30-250 &plusmn; 2&percnt;</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон і точність вимірювання концентрації вуглекислого
+                      газу в газовому середовищі
+                    </th>
+                    <td class="table__cell text">
+                      0,04-1&percnt; &plusmn; 3&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон вимірювань об'єму дихання (ОД)
+                    </th>
+                    <td class="table__cell text">
+                      0,25-6 л &plusmn; 5&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон вимірювань концентрації кисню в газовому
+                      середовищі
+                    </th>
+                    <td class="table__cell text">
+                      8-21&percnt; &plusmn; 5&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон завдання концентрації кисню в газовому середовищі
+                    </th>
+                    <td class="table__cell text">
+                      8-17,5&percnt; &plusmn; 10&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон вимірювань частоти дихання (ЧД)
+                    </th>
+                    <td class="table__cell text">
+                      5-30 хв.-1 &plusmn; 3&percnt;
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Діапазон вимірювання часу проведення сеансу гіпоксичного
+                      впливу
+                    </th>
+                    <td class="table__cell text">1-99 хв.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Тривалість сеансу «Діагностика»
+                    </th>
+                    <td class="table__cell text">&asymp;10 хв.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Тривалість сеансу «Лікування»
+                    </th>
+                    <td class="table__cell text">40-60 хв.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Номінальна напруга живлення
+                    </th>
+                    <td class="table__cell text">110-240 В</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Частота зміни однофазного струму
+                    </th>
+                    <td class="table__cell text">50-60 Гц</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Повна потужність, споживана апаратом
+                    </th>
+                    <td class="table__cell text">до 25 Вт</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Маса комплекту: блок автоматики і контур дихання
+                    </th>
+                    <td class="table__cell text">2,2 кг</td>
+                  </tr>
+                  <tr class="table__row dimensions">
+                    <th
+                      class="table__cell table__heading dimensions__heading"
+                      scope="row"
+                    >
+                      <span class="dimensions__heading-text text">
+                        Габаритні розміри:</span
+                      >
+                      <br />
+                      <ul class="dimensions__heading-list">
+                        <li class="text">блок автоматики;</li>
+                        <li class="text">контур дихання.</li>
+                      </ul>
+                    </th>
+                    <td class="table__cell text">
+                      150х080х033 мм<br />225х200х130 мм
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Передача і збереження даних
+                    </th>
+                    <td class="table__cell text">USB-порт</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Рівень шуму, утвореного апаратом
+                    </th>
+                    <td class="table__cell text">до 60 дБ</td>
+                  </tr>
+                  <tr class="table__row">
+                    <th class="table__cell table__heading text" scope="row">
+                      Тривожні сигнали
+                    </th>
+                    <td class="table__cell text">
+                      пульс, SpO<sub>2</sub>, ЧД, O<sub>2</sub>, CO<sub>2</sub>,
+                      аритмія
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
-            <div class="aparatus__container-unique container-unique">
-              <h2 class="aparatus__container-title container-title">
-                УНІКАЛЬНІСТЬ МЕТОДУ ТА АПАРАТУ ЗАФІКСОВАНА ПАТЕНТАМИ:
+            <div class="aparatus__patents patents">
+              <h2 class="patents__heading heading text">
+                Унікальність методу та апарату зафіксована патентами:
               </h2>
-              <div class="aparatus__unique-left unique-left">
-                <div class="aparatus__container-left-text container-left-text">
-                  <div class="aparatus__circle aparatus__circle--pink">1</div>
-                  <b class="bold-text">Патент України №7845.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Спосіб визначення стійкості організму людини до гіпоксії.
-                    15.07.2005, бюл. №7/2005.
-                  </p>
+              <div class="patents__body">
+                <div class="patents__items">
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading">Патент України №7845.</h3>
+                    <div class="item-patents__text text">
+                      Спосіб визначення стійкості організму людини до гіпоксії.
+                      15.07.2005, бюл. №7/2005.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №17698.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Спосіб підвищення опірності до гіпоксії організму людини.
+                      16.10.2006, бюл. №10/2006.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України № 27105.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Спосіб підвищення толерантності до фізичного навантаження
+                      у хворих похилого віку зі стабільною стенокардією напруги
+                      І та ІІ функціональних класів. 25.10.2007, бюл. №17/2007.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №29442.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Спосіб діагностики адаптаційної здатності організму
+                      людини. 10.01.2008, бюл. №1/2008.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України № 37447.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Спосіб покращення функціонального стану ендотелію судин
+                      літніх хворих зі стабільною стенокардією напруги І та ІІ
+                      функціональних класів. 25.11.2008, бюл. №22/2008.
+                    </div>
+                  </div>
                 </div>
-                <div class="aparatus__container-left-text container-left-text">
-                  <div class="aparatus__circle">2</div>
-                  <b class="bold-text">Патент України №17698. </b><br />
-                  <p class="aparatus_paragraph">
-                    Спосіб підвищення опірності до гіпоксії організму людини.
-                    16.10.2006, бюл. №10/2006.
-                  </p>
+                <div class="patents__images">
+                  <img src="img/aparatus/patent_first.jpg" alt="first patent" />
+                  <img
+                    src="img/aparatus/patent_second.jpg"
+                    alt="second patent"
+                  />
                 </div>
-                <div class="aparatus__container-left-text container-left-text">
-                  <div class="aparatus__circle aparatus__circle--pink">3</div>
-                  <b class="bold-text">Патент України № 27105.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Спосіб підвищення толерантності до фізичного навантаження у
-                    хворих похилого віку зі стабільною стенокардією напруги І та
-                    ІІ функціональних класів. 25.10.2007, бюл. №17/2007.
-                  </p>
-                </div>
-                <div class="aparatus__container-left-text container-left-text">
-                  <div class="aparatus__circle">4</div>
-                  <b class="bold-text">Патент України №29442.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Спосіб діагностики адаптаційної здатності організму людини.
-                    10.01.2008, бюл. №1/2008.
-                  </p>
-                </div>
-                <div class="aparatus__container-left-text container-left-text">
-                  <div class="aparatus__circle aparatus__circle--pink">5</div>
-                  <b class="bold-text">Патент України № 37447.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Спосіб покращення функціонального стану ендотелію судин
-                    літніх хворих зі стабільною стенокардією напруги І та ІІ
-                    функціональних класів. 25.11.2008, бюл. №22/2008.
-                  </p>
-                </div>
-              </div>
-              <div class="aparatus__unique-center unique-center">
-                <img
-                  src="img/aparatus/patent.png"
-                  class="unique-center__photo photo"
-                  alt="patent"
-                />
-              </div>
-              <div class="aparatus__unique-right unique-right">
-                <div
-                  class="aparatus__container-right-text container-right-text"
-                >
-                  <div class="aparatus__circle">6</div>
-                  <b class="bold-text">Патент України №7845</b><br />
-                  <p class="aparatus_paragraph">
-                    Спосіб визначення стійкості організму людини до гіпоксії.
-                    15.07.2005, бюл. №7/2005.
-                  </p>
-                </div>
-                <div
-                  class="aparatus__container-right-text container-right-text"
-                >
-                  <div class="aparatus__circle aparatus__circle--pink">7</div>
-                  <b class="bold-text">Патент України №74516.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Пристрій для дихання гіпоксичними сумішами. 15.12.2005, бюл.
-                    №12/2005.
-                  </p>
-                </div>
-                <div
-                  class="aparatus__container-right-text container-right-text"
-                >
-                  <div class="aparatus__circle">8</div>
-                  <b class="bold-text">Патент України №113908.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Автоматизований програмно-апаратний комплекс «Гіпотрон-М».
-                    27.02.2017, бюл. №4/2017.
-                  </p>
-                </div>
-                <div
-                  class="aparatus__container-right-text container-right-text"
-                >
-                  <div class="aparatus__circle aparatus__circle--pink">9</div>
-                  <b class="bold-text">Патент України №123682.</b> <br />
-                  <p class="aparatus_paragraph">
-                    Автоматизований програмно-апаратний комплекс для проведення
-                    гіпоксичних тренувань. 12.03.2018, бюл. № 5/2018.
-                  </p>
+                <div class="patents__items">
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №7845
+                    </h3>
+                    <div class="item-patents__text text">
+                      Спосіб визначення стійкості організму людини до гіпоксії.
+                      15.07.2005, бюл. №7/2005.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №74516.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Пристрій для дихання гіпоксичними сумішами. 15.12.2005,
+                      бюл. №12/2005.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №113908.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Автоматизований програмно-апаратний комплекс «Гіпотрон-М».
+                      27.02.2017, бюл. №4/2017.
+                    </div>
+                  </div>
+                  <div class="patents__item item-patents">
+                    <h3 class="item-patents__heading text">
+                      Патент України №123682.
+                    </h3>
+                    <div class="item-patents__text text">
+                      Автоматизований програмно-апаратний комплекс для
+                      проведення гіпоксичних тренувань. 12.03.2018, бюл. №
+                      5/2018.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="aparatus_recomendations recomendations">
-              <div class="recomendations__title">
+            <div class="aparatus__recommendations recommendations">
+              <h2 class="recommendations__heading heading text">
                 Методичні рекомендації МОЗ України:
-              </div>
-              <div class="recomendations__wrapper">
-                <ul class="recomendations__list list-recomendations">
-                  <li class="list-recomendations_item">
-                    Використання адаптогенної дії методу інтервальної
-                    нормобаричної гіпоксії в умовах антропогенного зміненого
-                    середовища за допомогою апарату «Гіпотрон», 2004.
-                  </li>
-                  <li class="list-recomendations_item">
-                    Використання лікувальних мінеральних вод карпатського
-                    регіону та Поділля у поєднанні з гіпокситерапією, 2004.
-                  </li>
-                  <li class="list-recomendations_item">
-                    Використання гіпоксичних тренувань у геріатричній практиці,
-                    2008.
-                  </li>
-                  <li class="list-recomendations_item">
-                    Вибір оптимальних режимів для проведення інтервальних
-                    нормобаричних гіпоксичних тренувань у медичній практиці та
-                    спортивній медицині, 2010.
-                  </li>
-                  <li class="list-recomendations_item">
-                    Використання інтервальних нормобаричних гіпоксичних
-                    тренувань у хворих похилого віку із хронічною обструкцією
-                    захворювань легень, 2017.
-                  </li>
-                </ul>
-              </div>
+              </h2>
+              <ul class="recommendations__list">
+                <li class="recommendations__item text">
+                  Використання адаптогенної дії методу інтервальної
+                  нормобаричної гіпоксії в умовах антропогенного зміненого
+                  середовища за допомогою апарату «Гіпотрон», 2004.
+                </li>
+                <li class="recommendations__item text">
+                  Використання лікувальних мінеральних вод карпатського регіону
+                  та Поділля у поєднанні з гіпокситерапією, 2004.
+                </li>
+                <li class="recommendations__item text">
+                  Використання гіпоксичних тренувань у геріатричній практиці,
+                  2008.
+                </li>
+                <li class="recommendations__item text">
+                  Вибір оптимальних режимів для проведення інтервальних
+                  нормобаричних гіпоксичних тренувань у медичній практиці та
+                  спортивній медицині, 2010.
+                </li>
+                <li class="recommendations__item text">
+                  Використання інтервальних нормобаричних гіпоксичних тренувань
+                  у хворих похилого віку із хронічною обструкцією захворювань
+                  легень, 2017.
+                </li>
+              </ul>
+            </div>
+            <div class="aparatus__science science">
+              <h2 class="science__heading heading text">Научні Публікації</h2>
+              <ol class="science__publications">
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Полягушко Л.Г., Шатило В.Б., Іщук В.О. Апаратно-програмний
+                    комплекс для проведення гіпоксичних тренувань «ГІПОТРОН» та
+                    ефективність його використання в комплексному лікуванні
+                    хворих літнього віку з ішемічною хворобою серця. Пробл.
+                    старіння і довголіття. 2013. Т.22. №4. С. 390-400.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Асанов Э.О., Осьмак Е.Д., Дыба И.А., Полягушко Л.Г.
+                    Эффективность применения интервальных нормобарических
+                    гипоксических тренировок с использованием
+                    автоматизированного программно-аппаратного комплекса
+                    «Гипотрон-М» в терапии пожилых больных с хроническим
+                    обструктивным заболеванием легких. Проблемы старения и
+                    долголетия. 2015. Т. 24. № 3-4. С. 340-348.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Асанов Э.О., Осьмак Е.Д., Дыба И.А., Полягушко Л.Г.
+                    Вентиляция легких и легочный газообмен у больных пожилого
+                    возраста c ХОЗЛ: влияние гипоксических тренировок.
+                    Український пульмонологічний журнал. 2016. №3. С. 35-38
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Асанов Э.О., Свинцицкий А.С., Дыба И.А., Осьмак Е.Д.,
+                    Полягушко Л.Г. Влияние гипоксических тренировок на состояние
+                    автономной нервной системы у лиц пожилого возраста, больных
+                    ХОЗЛ. Український пульмонологічний журнал. 2017. №1. С.
+                    31-36.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Асанов Э.О., Осьмак Е.Д., Дыба И.А., Полягушко Л.Г.
+                    Состояние сердечно-сосудистой системы у людей пожилого
+                    возраста с хроническим обструктивным заболеванием легких:
+                    влияние гипоксических тренировок. Проблемы старения и
+                    долголетия. 2017. Т. 26. № 1-2. С. 65-71.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Slipchenko V., Poliagushko L., Kotunov V. Development of
+                    hardware and software of the complex for hypoxytherapy.
+                    Technology audit and production reserves. 2018. № 2/2(40).
+                    P. 22-28.; DOI -
+                    <a
+                      class="science__publication-link"
+                      href="https://dx.doi.org/10.15587/2312-8372.2018.128802"
+                      >https://dx.doi.org/10.15587/2312-8372.2018.128802</a
+                    >
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Сліпченко В.Г., Полягушко Л.Г., Котунов В.О. Реєстрація
+                    параметрів автоматизованого програмно-апаратного комплексу
+                    медичного призначення. Реєстрація, зберігання і обробка
+                    даних. 2018. Том 20, №2. С.42-51.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Сліпченко В.Г., Полягушко Л.Г. Система автоматизованого
+                    проектування приборів спеціального медичного призначення.
+                    Сучасні проблеми моделювання: зб. наук. праць / МДПУ ім. Б
+                    Хмельницького; гол. ред. кол. А.В. Найдиш. Мелітополь:
+                    Видавництво МДПУ ім. Б Хмельницького, 2018. Вип. 12. С.
+                    138-143.
+                  </div>
+                </li>
+                <li class="science__publication publication">
+                  <div class="publication__text text">
+                    Полягушко Л.Г. Автоматизований аналіз стану пацієнта та
+                    оцінка сеансів медичних процедур (гіпокситерапії).
+                    Реєстрація, зберігання і обробка даних. 2019. Том 21, №2. С.
+                    12-20.
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </section>
         <section id="partners" class="main__partners partners">
           <div class="partners__container container">
-            <h2 class="partners__title heading">Наші Партнери</h2>
+            <h2 class="partners__heading heading text">Наші Партнери</h2>
             <div class="partners__carousel carousel swiper">
               <div class="carousel__wrapper swiper-wrapper">
                 <div class="carousel__slide swiper-slide">
                   <div class="carousel__image">
-                    <img src="img/partners/chebotaryov.png" alt="" />
+                    <a href="http://www.geront.kiev.ua/" class="partners__link"
+                      ><img
+                        src="img/partners/chebotaryov.png"
+                        alt="Chebotaryov"
+                    /></a>
                   </div>
                 </div>
                 <div class="carousel__slide swiper-slide">
                   <div class="carousel__image">
-                    <img src="img/partners/bogomolets1.png" alt="" />
+                    <a
+                      href="http://biph.kiev.ua/en/Main_Page"
+                      class="partners__link"
+                      ><img src="img/partners/bogomolets1.png" alt="Bogomolets"
+                    /></a>
                   </div>
                 </div>
                 <div class="carousel__slide swiper-slide">
                   <div class="carousel__image">
-                    <img src="img/partners/bogomolets2.png" alt="" />
+                    <a href="https://nmuofficial.com/" class="partners__link"
+                      ><img src="img/partners/bogomolets2.png" alt="Bogomolets"
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -605,150 +743,255 @@
         </section>
         <section id="team" class="main__team team">
           <div class="team__container container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos vero
-            provident ipsam asperiores modi quas soluta in voluptatum, fugiat
-            repudiandae consectetur magnam assumenda nostrum reprehenderit
-            placeat pariatur est? Veniam, laborum. Iusto suscipit quaerat
-            provident quas. Illum laboriosam molestiae impedit voluptate
-            excepturi nisi cumque quas earum autem? Delectus optio quibusdam
-            quod labore. Quos facilis vitae rem amet perspiciatis placeat quo
-            odit. Minima modi quidem vero voluptatum velit! Incidunt, laudantium
-            soluta. Sed dolor voluptatum molestiae cum, sit alias sint
-            consequuntur minima doloremque, recusandae temporibus, accusantium
-            deserunt dolores laborum odio! Officia, natus illo. Commodi quos
-            natus incidunt, nulla eos velit facere vitae officia facilis
-            consectetur molestiae autem sequi quam, labore harum porro magnam
-            eveniet, vero eaque et! Expedita blanditiis natus itaque doloremque
-            totam. Et tenetur nostrum quisquam sapiente tempora modi possimus
-            voluptatum quo quidem fugit consequatur, officiis exercitationem
-            placeat eum quas omnis cum soluta, accusamus neque perferendis illo
-            minus, eos suscipit. Similique, in! Mollitia aliquam itaque nam
-            saepe praesentium. Quos id earum, illum vitae sint veritatis
-            reprehenderit soluta cumque nihil, maxime incidunt cum excepturi
-            quo, ipsam ipsum exercitationem! Rerum repellendus officiis
-            assumenda est. Eum molestiae animi earum quo maiores voluptate aut
-            iure, officia explicabo quos, unde tempore, quas esse laborum sed
-            porro perspiciatis aperiam obcaecati! Eos enim similique officia
-            saepe dignissimos iusto nostrum? Aperiam architecto reprehenderit,
-            accusamus ea perferendis nesciunt totam libero deserunt repellendus
-            quisquam ex itaque tempore labore recusandae cum pariatur alias ipsa
-            quae. Eos impedit tenetur vel? Magnam ducimus consequatur voluptate!
-            Eos eaque perspiciatis excepturi ut repellendus? Aspernatur quam
-            nisi, odio obcaecati magnam nemo quo. Aliquam, similique! Iure
-            minus, similique exercitationem veniam, enim expedita dicta beatae
-            cumque vitae fugit, est illo. Veritatis beatae, minus quod aliquam
-            sunt vero debitis pariatur repudiandae deserunt, aliquid
-            necessitatibus excepturi rerum quae est qui recusandae ut quos.
-            Facilis asperiores praesentium reprehenderit hic consequuntur
-            eveniet perferendis cupiditate? Deserunt odit voluptate doloremque!
-            Accusamus excepturi, animi magnam, nisi at laboriosam reprehenderit
-            ex soluta cupiditate asperiores quisquam, rem natus nemo! Qui
-            dolores eius ut quas amet tenetur numquam dignissimos odio! Nobis
-            molestiae, commodi officiis fugiat praesentium illo nisi harum
-            minima esse optio magnam, ducimus porro. Totam cupiditate, ipsum hic
-            nihil error eligendi, officia commodi iste architecto neque numquam
-            sit cum! Ipsa veritatis debitis, iste ad ex consectetur, maxime nam
-            quae, aliquam praesentium asperiores sequi! Nemo laborum
-            exercitationem reprehenderit impedit animi at repudiandae, sed
-            ducimus sunt labore sequi maxime officiis illum! Ex debitis error
-            tempora optio minima? Harum aliquam natus officiis non soluta hic
-            eos itaque ad atque ut, nesciunt officia vitae eius deleniti id odit
-            cum totam cumque mollitia autem! Nam repudiandae temporibus quas.
-            Culpa ducimus cupiditate, laborum temporibus possimus placeat harum
-            sunt ex dolorem quisquam suscipit eaque tenetur at ipsum nesciunt
-            animi molestiae impedit! Delectus et sapiente voluptates
-            dignissimos.
+            <h2 class="team__heading heading text">Наша Команда</h2>
+            <div class="team__body">
+              <div class="team__column">
+                <div class="team__item member-card">
+                  <div class="member-card__image">
+                    <img src="img/team/Artem.jpg" alt="Artem" />
+                  </div>
+                  <div class="member-card__info">
+                    <span class="member-card__name">Бабенко Артем</span>
+                    <span class="member-card__role">Розробник</span>
+                    <div class="member-card__social social">
+                      <a href="https://github.com/f1ntech" class="social__item">
+                        <img src="img/social/github.svg" alt="github" />
+                      </a>
+                      <a href="https://t.me/f11ntech" class="social__item">
+                        <img src="img/social/telegram.svg" alt="telegram" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/f1ntech/"
+                        class="social__item"
+                      >
+                        <img src="img/social/instagram.svg" alt="instagram" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__column">
+                <div class="team__item member-card">
+                  <div class="member-card__image">
+                    <img src="img/team/Kyrylo.jpg" alt="Kyrylo" />
+                  </div>
+                  <div class="member-card__info">
+                    <span class="member-card__name">Бортніков Кирило</span>
+                    <span class="member-card__role">Дизайнер</span>
+                    <div class="member-card__social social">
+                      <a
+                        href="https://github.com/funt0m41k"
+                        class="social__item"
+                      >
+                        <img src="img/social/github.svg" alt="github" />
+                      </a>
+                      <a href="https://t.me/kirill_wave" class="social__item">
+                        <img src="img/social/telegram.svg" alt="telegram" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/kirillwave_/"
+                        class="social__item"
+                      >
+                        <img src="img/social/instagram.svg" alt="instagram" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__column">
+                <div class="team__item member-card">
+                  <div class="member-card__image">
+                    <img src="img/team/Anton.jpg" alt="Anton" />
+                  </div>
+                  <div class="member-card__info">
+                    <span class="member-card__name">Бочковський Антон</span>
+                    <span class="member-card__role">Розробник</span>
+                    <div class="member-card__social social">
+                      <a
+                        href="https://github.com/firehawk89"
+                        class="social__item"
+                      >
+                        <img src="img/social/github.svg" alt="github" />
+                      </a>
+                      <a href="https://t.me/Spokened" class="social__item">
+                        <img src="img/social/telegram.svg" alt="telegram" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/antoshka_numberone/"
+                        class="social__item"
+                      >
+                        <img src="img/social/instagram.svg" alt="instagram" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__column">
+                <div class="team__item member-card">
+                  <div class="member-card__image">
+                    <img src="img/team/Maksym.jpg" alt="Maksym" />
+                  </div>
+                  <div class="member-card__info">
+                    <span class="member-card__name">Матвієнко Максим</span>
+                    <span class="member-card__role">Розробник</span>
+                    <div class="member-card__social social">
+                      <a
+                        href="https://github.com/Filostrat"
+                        class="social__item"
+                      >
+                        <img src="img/social/github.svg" alt="github" />
+                      </a>
+                      <a href="https://t.me/Fillostrat" class="social__item">
+                        <img src="img/social/telegram.svg" alt="telegram" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section id="getintouch" class="main__getintouch getintouch">
           <div class="getintouch__container container">
-            <h2 class="getintouch__title heading">Контакти</h2>
-            <div class="getintouch__items">
-              <iframe
-                class="getintouch__map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5724497654764!2d30.46308841561576!3d50.449063979475156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8314fdfde3%3A0xcaff87f52cccc2ec!2z0YPQuy4g0J_QvtC70LjRgtC10YXQvdC40YfQtdGB0LrQsNGPLCA2LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1667034917424!5m2!1sru!2sua"
-                width="550"
-                height="350"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-              <div class="getintouch__contacts contacts">
-                <a
-                  href="tel:+380939149571"
-                  class="contacts__item getintouch__item getintouch__item--phone"
-                  >+38 (093) 914-95-71</a
-                >
-                <a
-                  href="mailto:ddpolytechnic2016@gmail.com"
-                  class="contacts__item getintouch__item getintouch__item--email"
-                  >ddpolytechnic2016@gmail.com</a
-                >
-                <a
-                  href="https://www.google.com.ua/maps/place/Politekhnichna+St,+6,+Kyiv,+02000/@50.449064,30.4630884,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce8314fdfde3:0xcaff87f52cccc2ec!8m2!3d50.449064!4d30.4652771?hl=en"
-                  class="contacts__item getintouch__item getintouch__item--adress"
-                  >вулиця Політехнічна, 6, Київ, 02000</a
-                >
+            <h2 class="getintouch__heading heading text">Контакти</h2>
+            <div class="getintouch__body">
+              <div class="getintouch__items">
+                <iframe
+                  class="getintouch__map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5724497654764!2d30.46308841561576!3d50.449063979475156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8314fdfde3%3A0xcaff87f52cccc2ec!2z0YPQuy4g0J_QvtC70LjRgtC10YXQvdC40YfQtdGB0LrQsNGPLCA2LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1667034917424!5m2!1sru!2sua"
+                  width="550"
+                  height="350"
+                  style="border: 0"
+                  allowfullscreen=""
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <div class="getintouch__contacts contacts">
+                  <a
+                    href="tel:+380939149571"
+                    class="contacts__item getintouch__item getintouch__item--phone text"
+                    >+38 (093) 914-95-71</a
+                  >
+                  <a
+                    href="mailto:ddpolytechnic2016@gmail.com"
+                    class="contacts__item getintouch__item getintouch__item--email text"
+                    >ddpolytechnic2016@gmail.com</a
+                  >
+                  <a
+                    href="https://www.google.com.ua/maps/place/Politekhnichna+St,+6,+Kyiv,+02000/@50.449064,30.4630884,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce8314fdfde3:0xcaff87f52cccc2ec!8m2!3d50.449064!4d30.4652771?hl=en"
+                    class="contacts__item getintouch__item getintouch__item--adress text"
+                    >вулиця Політехнічна, 6, Київ, 02000</a
+                  >
+                </div>
               </div>
-            </div>
-            <div class="getintouch__feedback feedback">
-              <form id="form" action="/" class="feedback__form form-getintouch">
-                <h3 class="form-getintouch__heading">Зворотній зв'язок</h3>
-                <div class="form-getintouch__item">
-                  <label class="form-getintouch__label" for="name"
-                    >Ваше ім'я <span class="item-important">*</span></label
-                  >
-                  <input
-                    id="name"
-                    class="form-getintouch__input form-getintouch__input--important"
-                    type="text"
-                    placeholder="Ігор"
-                  />
-                </div>
-                <div class="form-getintouch__item">
-                  <label class="form-getintouch__label" for="phone"
-                    >Ваш телефон <span class="item-important">*</span></label
-                  >
-                  <input
-                    id="phone"
-                    class="form-getintouch__input form-getintouch__input--important"
-                    type="text"
-                    placeholder="+38(000)000-00-00"
-                  />
-                </div>
-                <div class="form-getintouch__item">
-                  <label class="form-getintouch__label" for="email"
-                    >Ваш email</label
-                  >
-                  <input
-                    id="email"
-                    class="form-getintouch__input"
-                    type="email"
-                    placeholder="youremail@gmail.com"
-                  />
-                </div>
-                <div class="form-getintouch__item">
-                  <label class="form-getintouch__label" for="message"
-                    >Повідомлення</label
-                  >
-                  <textarea
-                    id="message"
-                    class="form-getintouch__input form-getintouch__textarea"
-                  ></textarea>
-                </div>
-                <button class="form-getintouch__btn btn" type="submit">
-                  Відправити
-                </button>
-              </form>
+              <div class="getintouch__feedback feedback">
+                <form
+                  id="form"
+                  action="/"
+                  class="feedback__form form-getintouch"
+                >
+                  <h3 class="form-getintouch__heading text">
+                    Зворотній зв'язок
+                  </h3>
+                  <div class="form-getintouch__item">
+                    <label class="form-getintouch__label text" for="name"
+                      >Ваше ім'я <span>*</span></label
+                    >
+                    <input
+                      id="name"
+                      class="form-getintouch__input form-getintouch__input--important"
+                      type="text"
+                      placeholder="Ігор"
+                    />
+                  </div>
+                  <div class="form-getintouch__item">
+                    <label class="form-getintouch__label text" for="phone"
+                      >Ваш телефон <span>*</span></label
+                    >
+                    <input
+                      id="phone"
+                      class="form-getintouch__input form-getintouch__input--important"
+                      type="text"
+                      placeholder="+38(000)000-00-00"
+                    />
+                  </div>
+                  <div class="form-getintouch__item">
+                    <label class="form-getintouch__label text" for="email"
+                      >Ваш email</label
+                    >
+                    <input
+                      id="email"
+                      class="form-getintouch__input"
+                      type="email"
+                      placeholder="youremail@gmail.com"
+                    />
+                  </div>
+                  <div class="form-getintouch__item">
+                    <label class="form-getintouch__label text" for="message"
+                      >Повідомлення</label
+                    >
+                    <textarea
+                      id="message"
+                      class="form-getintouch__input form-getintouch__textarea"
+                    ></textarea>
+                  </div>
+                  <button class="form-getintouch__btn btn text" type="submit">
+                    Відправити
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      <footer class="footer">footer</footer>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__body">
+            <nav class="footer__menu menu">
+              <ul class="footer__menu-list menu__list">
+                <li class="menu__item">
+                  <a href="#method" class="footer__menu-link menu__link"
+                    >Про метод</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#aparatus" class="footer__menu-link menu__link"
+                    >Про прилад</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#partners" class="footer__menu-link menu__link"
+                    >Партнери</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#team" class="footer__menu-link menu__link"
+                    >Команда</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#getintouch" class="footer__menu-link menu__link"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__social social">
+              <a href="" class="social__item">
+                <img src="img/social/facebook.svg" alt="facebook" />
+              </a>
+              <a href="" class="social__item">
+                <img src="img/social/telegram.svg" alt="telegram" />
+              </a>
+              <a href="" class="social__item">
+                <img src="img/social/viber.svg" alt="viber" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <div class="options">
-      <button class="options__item contact-popup">
+      <button class="options__item contact-btn contact-popup">
         <svg
           class="contact-popup__icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -780,10 +1023,62 @@
         </svg>
       </a>
     </div>
+    <div class="feedback-modal">
+      <div class="feedback-modal__content">
+        <button class="feedback-modal__close-btn">&times;</button>
+        <form id="form-modal" action="/" class="form-getintouch">
+          <h3 class="form-getintouch__heading">Зворотній зв'язок</h3>
+          <div class="form-getintouch__item">
+            <label class="form-getintouch__label" for="name"
+              >Ваше ім'я <span>*</span></label
+            >
+            <input
+              id="name-modal"
+              class="form-getintouch__input input-modal input-modal--important"
+              type="text"
+              placeholder="Ігор"
+            />
+          </div>
+          <div class="form-getintouch__item">
+            <label class="form-getintouch__label" for="phone"
+              >Ваш телефон <span>*</span></label
+            >
+            <input
+              id="phone-modal"
+              class="form-getintouch__input input-modal input-modal--important"
+              type="text"
+              placeholder="+38(000)000-00-00"
+            />
+          </div>
+          <div class="form-getintouch__item">
+            <label class="form-getintouch__label" for="email">Ваш email</label>
+            <input
+              id="email-modal"
+              class="form-getintouch__input input-modal"
+              type="email"
+              placeholder="youremail@gmail.com"
+            />
+          </div>
+          <div class="form-getintouch__item">
+            <label class="form-getintouch__label" for="message"
+              >Повідомлення</label
+            >
+            <textarea
+              id="message-modal"
+              class="form-getintouch__input input-modal form-getintouch__textarea"
+            ></textarea>
+          </div>
+          <button class="form-getintouch__btn modal-btn btn" type="submit">
+            Відправити
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/carousel.js"></script>
   </body>
 </html>

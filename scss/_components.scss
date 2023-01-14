@@ -1,3 +1,4 @@
+/* burger menu */
 .burger {
   &__bar {
     width: 30px;
@@ -35,14 +36,39 @@
   }
 }
 
+/* heading */
 .heading {
   text-align: center;
-  font-size: 36px;
-  line-height: ((57 / 36) * 100%);
-  font-weight: 600;
+  font-size: 38px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
   color: $secondaryColor;
+  margin-bottom: 40px;
+
+  @include _1100 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  @include _768 {
+    margin-bottom: 30px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  @include _568 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  @include _480 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 
+/* button */
 .btn {
   min-height: 40px;
   position: relative;
@@ -74,30 +100,31 @@
   }
 }
 
+/* additional features */
 .options {
   position: fixed;
-  bottom: 45px;
-  right: 45px;
+  bottom: 35px;
+  right: 35px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 
-  @include _768 {
-    bottom: 30px;
-    right: 30px;
+  @include _992 {
+    bottom: 25px;
+    right: 25px;
     gap: 20px;
   }
 
-  @include _480 {
-    bottom: 20px;
-    right: 20px;
+  @include _768 {
+    bottom: 15px;
+    right: 15px;
   }
 
   &__item {
     position: relative;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,6 +152,7 @@
   }
 }
 
+/* scroll to the top of the site button */
 .scroll-top-btn {
   transform: translateY(16px);
 
@@ -139,6 +167,7 @@
   }
 }
 
+/* feedback popup */
 .contact-popup {
   transform: translateY(-16px);
 
@@ -171,8 +200,12 @@
 
 /* social links */
 .social {
+  display: flex;
+  gap: 20px;
+
   &__item {
-    position: relative;
+    //display: inline-block;
+    //position: relative;
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -184,20 +217,6 @@
 /* website navigation */
 .menu {
   font-weight: 500;
-  @include _992 {
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    height: 100vh;
-    width: 100%;
-    background-color: white;
-    transition: all 0.3s ease;
-    overflow: auto;
-  }
-
-  &.active {
-    transform: translateY(100%);
-  }
 
   &__list {
     display: flex;
@@ -207,22 +226,17 @@
     @include _1100 {
       gap: 20px;
     }
-
-    @include _992 {
-      flex-direction: column;
-      gap: 15px;
-    }
   }
 
   &__link {
     position: relative;
     color: $textColor;
-    line-height: calc((24 / 16) * 100%);
+    font-size: 17px;
+    line-height: calc((24 / 17) * 100%);
     letter-spacing: 0.1px;
     transition: all 0.3s ease;
-    &:hover {
-      color: black;
 
+    &:hover {
       @include min_992 {
         color: $mainColor;
       }
@@ -230,12 +244,6 @@
 
     @include min_992 {
       @include underline("&", $mainColor);
-    }
-
-    @include _992 {
-      display: block;
-      font-size: 24px;
-      text-align: center;
     }
   }
 
@@ -258,6 +266,7 @@
 
 /* search input */
 .search {
+  position: relative;
   min-height: 40px;
   display: flex;
   align-items: center;
@@ -269,7 +278,7 @@
     outline: none;
     background: none;
     border: 2px solid $mainColor;
-    padding: 0px 15px;
+    padding: 0px 25px 0px 15px;
     border-radius: 25px 0px 0px 25px;
   }
 
@@ -290,54 +299,24 @@
   }
 }
 
-.method__methodLeft {
-  float: left;
-  margin: 20px;
-  max-width: 1000px;
-  position: relative;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 600;
-  padding: 15px 20px;
-  color: $mainColor;
-  letter-spacing: 0.2px;
-  background: none;
-  border: 4px solid $mainColor;
-  border-radius: 30px;
-  transition: all 0.3s ease;
+.clear-btn {
+  position: absolute;
+  top: 10px;
+  right: 55px;
   cursor: pointer;
-
-  &:hover {
-    background: $mainColor;
-    border: 4px solid $mainColor;
-    color: #fff;
-  }
-}
-
-.method__methodRight {
-  float: right;
-  margin: 20px;
-  width: 1000px;
-  position: relative;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 600;
-  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 24px;
   color: $secondaryColor;
-  letter-spacing: 0.2px;
-  background: none;
-  border: 4px solid $secondaryColor;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    background: $secondaryColor;
-    border: 4px solid $secondaryColor;
-    color: #fff;
-  }
 }
 
+/*feedback form */
 .feedback {
   width: 100%;
 }
@@ -348,7 +327,7 @@
   &__heading {
     text-align: center;
     font-size: 24px;
-    line-height: ((36 / 24) * 100%);
+    line-height: (calc(36 / 24) * 100%);
     font-weight: 600;
     color: $secondaryColor;
     margin-bottom: 15px;
@@ -364,6 +343,10 @@
   &__label {
     display: block;
     position: relative;
+
+    span {
+      color: $secondaryColor;
+    }
   }
 
   &__input {
@@ -377,7 +360,7 @@
     border-radius: 15px;
 
     &.error {
-      border: 2px solid rgb(230, 0, 0);
+      border: 2px solid $secondaryColor;
     }
   }
 
@@ -391,6 +374,7 @@
   }
 }
 
+/* carousel */
 .carousel {
   &__image {
     text-align: center;
@@ -414,6 +398,150 @@
   }
 }
 
-.item-important {
-  color: red;
+/* modal window */
+.feedback-modal {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease;
+
+  &__content {
+    flex: 0 1 350px;
+    box-sizing: content-box;
+    position: relative;
+    max-width: 350px;
+    margin: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+/* team member card */
+.member-card {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  @include glassBackground("&", rgba(255, 255, 255, 0.1));
+
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    padding: 15px 0 7px;
+    text-align: center;
+  }
+
+  &__name {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+
+  &__role {
+    display: block;
+    line-height: 18px;
+    color: rgb(83, 83, 83);
+    margin-bottom: 12px;
+  }
+
+  &__social {
+    justify-content: center;
+  }
+}
+
+/* dimensions cell in the characteristics table */
+.dimensions {
+  &__heading {
+    &-list {
+      list-style: square;
+      padding-left: 20px;
+      margin-top: 10px;
+
+      @include _768 {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+/* science publication */
+.publication {
+  display: flex;
+  align-items: center;
+}
+
+/* patent information block */
+.item-patents {
+  padding: 15px;
+  border-radius: 20px;
+  background-color: $mainColor;
+  color: #fafafa;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  & > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: $secondaryColor;
+    transform: scale(1.03);
+  }
+
+  &__heading {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+
+    @include _768 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: justify;
+
+    @include _768 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
 }
